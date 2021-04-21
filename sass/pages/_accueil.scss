@@ -1,0 +1,42 @@
+.functioning{
+    flex-direction: column;
+    margin-bottom: $section-seperation;
+}
+
+.restaurants{
+    background-color: $section-background;
+    padding-top: $section-seperation;
+    padding-bottom: $section-seperation;
+}
+
+/* RESTAURANT CARDS*/
+.restaurant-card{
+    flex: 1 1; /*short hand for flex grow, flex shrink, flex-basis*/
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem; 
+    background-color: #fff;
+    margin: 1.25rem;
+    @include card-boxshadow;
+
+    &__photo{               /*restaurant image styling*/
+    border-radius: 1rem 1rem 0rem 0rem;
+    height: 173px;
+    object-fit: cover;
+   }
+    &__description {        /*positioning of descriptions under cards*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -5px;
+        padding-left: 8px;
+        p {
+            margin-top: -0.625rem;
+        }
+    }
+    &__heart{      /*heart image size/position*/
+        @include icon-style;
+    }
+}
+
+

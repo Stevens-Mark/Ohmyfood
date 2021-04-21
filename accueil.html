@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Ohmyfood!</title>
+    <meta name="author" content="Mark Stevens">
+    <meta name="description" content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux
+	utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
+	restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte.
+	">
+	<!--scipt so I can use awesome icons in my pages-->
+	<script src="https://kit.fontawesome.com/03234693f3.js" crossorigin="anonymous"></script>
+    <!--used to mobile-optimize the site: set webpage to size of device: scale 1 means no need to zoom in-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="public/images/logo/ohmyfood.png">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+</head>    
+<body>
+				<!--START of HEADER --> 
+	<header class="header" class="d-flex">
+
+		<img class="header__logo" src="public/images/logo/ohmyfood@2x.svg" alt="Ohmyfood! logo">
+
+		<div class="header__banner d-flex">
+			<img class="header__banner__icon" src="public/images/icons/mapmarker.svg" alt="Map marker logo">
+			<p></i>Paris, Belleveille</p></div>
+
+		<div class="header__instructions">
+			<h1>Réservez le menu qui vous convient</h1>
+			<p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+			<div class="primary-button">Explorer nos restaurants</div>
+		</div>
+	</header>		<!--END of HEADER --> 
+    
+	<main>	
+		<section class="functioning" class="d-flex">  
+			<h2>Fonctionnement</h2>
+			
+				<div class="select-button">
+					<img class="select-button__icon" src="public/images/icons/mobile.svg" alt="List logo"><p>Choississez un restaurant</p></div>
+				<div class="select-button">
+					<img class="select-button__icon" src="public/images/icons/list.svg" alt="Mobile logo">
+					<p>Composez votre menu</p></div>
+				<div class="select-button select-button--colourmodify">
+					<img class="select-button__icon" src="public/images/icons/store.svg" alt="Store logo">
+					<p>Dégustez au restaurant</p>
+				</div>
+		
+		</section> 	<!--END of OPERATION SECTION -->
+
+	<section class="restaurants" class="d-flex">  
+
+			<h2>Restaurants</h2>
+							<!--start of restaurant cards block -->		
+						<!--Restaurant Card 1-->			
+				<a class="restaurant-card" href="#">
+					<img class="restaurant-card__photo" src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+					<div class="restaurant-card__description">
+						<div>
+							<h3>La palette du goût</h3>
+							<p>Ménilmontant</p>
+						</div>			
+						<img class="restaurant-card__heart" src="public/images/icons/heart.svg" alt="Heart Logo">			
+					</div>
+				</a>						
+						<!--Restaurant Card 2-->			
+				<a class="restaurant-card" href="#">
+					<img class="restaurant-card__photo" src="public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+					<div class="restaurant-card__description">
+						<div>
+							<h3>La note enchantée</h3>
+							<p>Charonne</p>
+						</div>			
+						<img class="restaurant-card__heart" src="public/images/icons/heart.svg" alt="Heart Logo">
+					</div>
+				</a>
+						<!--Restaurant Card 3-->			
+				<a class="restaurant-card" href="#">
+					<img class="restaurant-card__photo" src="public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
+					<div class="restaurant-card__description">
+						<div>
+							<h3>À la française</h3>
+							<p>Cité Rouge</p>
+						</div>			
+						<img class="restaurant-card__heart" src="public/images/icons/heart.svg" alt="Heart Logo">	
+					</div>
+				</a>					
+						<!--Restaurant Card 4-->			
+				<a class="restaurant-card" href="#">
+					<img class="restaurant-card__photo" src="public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="La-delice">
+					<div class="restaurant-card__description">
+						<div>
+							<h3>La délice des sens</h3>
+							<p>Folie-Méricourt</p>
+						</div>			
+						<img class="restaurant-card__heart" src="public/images/icons/heart.svg" alt="Heart Logo">	
+					</div>
+				</a>											
+	</section> 			<!--END of RESTAURANTS SECTION --> 
+
+</main>		
+
+	<footer class="footer">	<!--START of FOOTER --> 
+					<img src="public/images/logo/ohmyfood@2x.svg" alt="ohmyfood-small-logo" title="Ohmyfood small Logo">	
+				<ul>
+					<li><img src="public/images/icons/fork.svg" alt="Knife and fork logo"><a href="#">Proposer un restaurant</a></li>
+					<li><img src="public/images/icons/handshake.svg" alt="Hand shake logo"><a href="#">Devenir partenaire</a></li>
+					<li><a href="#">Mentions légales</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+	</footer>
+</body>
+</html>

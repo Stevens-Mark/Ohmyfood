@@ -1,0 +1,25 @@
+.primary-button {
+    border-radius: 2rem;
+    padding: 1rem;
+    color: white;
+    background-image: linear-gradient(to top, $primary-colour 0%, $secondary-colour 100%);
+    @include card-boxshadow;
+}
+
+.select-button {
+    display: flex;
+    align-items: center;
+    background: $section-background;
+    font-weight: bold;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1.25rem;
+    @include card-boxshadow;
+    &--colourmodify{
+        background: pastel($primary-colour);     
+    }
+    &__icon{  /*icon size/position*/
+        @include icon-style;
+    }
+}
+
