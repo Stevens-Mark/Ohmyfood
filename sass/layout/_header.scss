@@ -19,6 +19,9 @@
     &__instructions{
         padding: 2.9rem; /*46px*/   
         background: $section-background;
+        >p{
+            color: $quaternary-color;
+        }
     }
 }
 

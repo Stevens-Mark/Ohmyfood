@@ -1,8 +1,11 @@
-.functioning{
+
+/*SELECT SECTION: choose a resto, menu ten taste*/
+.select{
     flex-direction: column;
     margin-bottom: $section-seperation;
 }
 
+/*RESTAURANT SECTION*/
 .restaurants{
     background-color: $section-background;
     padding-top: $section-seperation;
@@ -16,8 +19,10 @@
     flex-direction: column;
     border-radius: 1rem; 
     background-color: #fff;
-    margin: 1.25rem;
+    margin: $layout-gutter;
     @include card-boxshadow;
+    position: relative;
+    z-index: 1;  
 
     &__photo{               /*restaurant image styling*/
     border-radius: 1rem 1rem 0rem 0rem;
@@ -34,9 +39,25 @@
             margin-top: -0.625rem;
         }
     }
-    &__heart{      /*heart image size/position*/
+    &__heart{      /*heart image size & position*/
         @include icon-style;
     }
+    &:hover{   
+        &::after {
+            opacity: 1;             /*set to 1 so the layer is visible on hover*/
+        }
+    }
+    &::after{                       /*create boxshadow that appears over button*/
+        content:"";                 /*when the opacity of the layer is changed*/
+        position: absolute;         /*avoids a repaint of page (no reloading) so*/
+        top: 0;                     /*more efficient*/
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 1rem;
+        opacity: 0;                                    
+        z-index: -1;                                   
+        transition: opacity $button-transition-time;   
+        @include card-hovershadow;
+    }      
 }
-
-

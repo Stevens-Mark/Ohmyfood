@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*mixins for the button/card shadow effects*/
+/* icon sizing & postioning*/
 /* HEADER */
 /* Main elements of the page */
 html,
@@ -51,39 +53,115 @@ a {
   text-decoration: none;
 }
 
+/*colourful button used on each page*/
 .primary-button {
   border-radius: 2rem;
   padding: 1rem;
-  color: white;
+  color: #ffff;
+  /*gradient color on button based on color scheme*/
   background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   box-shadow: 0px 4px 12px 0px #d9d9d9;
+  position: relative;
+  z-index: 1;
+}
+.primary-button:hover::after {
+  opacity: 1;
+  /*set to 1 so the layer is visible on hover*/
+}
+.primary-button::after {
+  /*create layer that appears over the button*/
+  content: "";
+  /*white mask that lightens the button on hover*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  /*layer hidden until hover*/
+  z-index: -1;
+  /*changes stacking order so background is behind*/
+  transition: opacity 1000ms;
+  /*text but infront of original button background*/
+  /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  /* x,y,blur,spread*/
 }
 
+/*selection buttons used in the fonctionnement section*/
 .select-button {
   display: flex;
   align-items: center;
-  background: #f6f6f6;
   font-weight: bold;
-  border-radius: 1rem;
+  border-radius: 1.2rem;
   padding: 1rem;
-  margin: 1.25rem;
+  margin: 1.875rem;
+  background: #f6f6f6;
+  fill: #7e7e7e;
+  /*change color of icons*/
   box-shadow: 0px 4px 12px 0px #d9d9d9;
+  position: relative;
+  z-index: 1;
 }
-.select-button--colourmodify {
-  background: #f4ebff;
+.select-button__number {
+  /*style for numbers on fonctionnement buttons*/
+  background: #9356DC;
+  color: #ffff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  padding-left: 8px;
+  padding-top: 3px;
+  position: relative;
+  left: -25px;
 }
 .select-button__icon {
-  /*icon size/position*/
+  /*icons size/position*/
   width: 20px;
   height: 20px;
   margin-right: 20px;
 }
+.select-button--colourmodify {
+  /*icon & button color modification for dégustez button*/
+  background: #f4ebff;
+  /* alter button background color based on main colour*/
+  fill: #9356DC;
+}
+.select-button:hover::after {
+  opacity: 1;
+  /*set to 1 so the layer is visible*/
+}
+.select-button::after {
+  /*::after places this  layer everywhere select-button selector*/
+  content: "";
+  /* is mentioned in the html*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  /*layer hidden until hover*/
+  z-index: -1;
+  /*changes stacking order so background is behind*/
+  transition: opacity 1000ms;
+  /*text but infront of original button background*/
+  /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  /* x,y,blur,spread*/
+}
 
-.functioning {
+/*SELECT SECTION: choose a resto, menu ten taste*/
+.select {
   flex-direction: column;
   margin-bottom: 2.875rem;
 }
 
+/*RESTAURANT SECTION*/
 .restaurants {
   background-color: #f6f6f6;
   padding-top: 2.875rem;
@@ -98,8 +176,10 @@ a {
   flex-direction: column;
   border-radius: 1rem;
   background-color: #fff;
-  margin: 1.25rem;
+  margin: 1.875rem;
   box-shadow: 0px 4px 12px 0px #d9d9d9;
+  position: relative;
+  z-index: 1;
 }
 .restaurant-card__photo {
   /*restaurant image styling*/
@@ -119,10 +199,33 @@ a {
   margin-top: -0.625rem;
 }
 .restaurant-card__heart {
-  /*heart image size/position*/
+  /*heart image size & position*/
   width: 20px;
   height: 20px;
   margin-right: 20px;
+}
+.restaurant-card:hover::after {
+  opacity: 1;
+  /*set to 1 so the layer is visible on hover*/
+}
+.restaurant-card::after {
+  /*create boxshadow that appears over button*/
+  content: "";
+  /*when the opacity of the layer is changed*/
+  position: absolute;
+  /*avoids a repaint of page (no reloading) so*/
+  top: 0;
+  /*more efficient*/
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 1rem;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 1000ms;
+  /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  /* x,y,blur,spread*/
 }
 
 .header {
@@ -151,19 +254,27 @@ a {
   /*46px*/
   background: #f6f6f6;
 }
+.header__instructions > p {
+  color: #7e7e7e;
+}
 
 .footer {
   background: #353535;
-  padding: 1.25rem;
+  padding: 1.875rem;
 }
 
-.footer a {
-  color: #ffffff;
-}
-
+/*footer log size*/
 footer img {
   width: 5.625rem;
   /*90px*/
+}
+
+/*links change to third colour choice of site*/
+.footer a {
+  color: #ffffff;
+}
+.footer a:hover {
+  color: #99E2D0;
 }
 
 ul {
@@ -174,6 +285,7 @@ ul {
   padding-left: 0rem;
 }
 
+/*small logos sizing/postioning in footer*/
 ul img {
   width: 0.9rem;
   height: 0.9rem;

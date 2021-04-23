@@ -1,25 +1,85 @@
+/*colourful button used on each page*/
 .primary-button {
     border-radius: 2rem;
     padding: 1rem;
-    color: white;
+    color: $secondary-text;
+    /*gradient color on button based on color scheme*/
     background-image: linear-gradient(to top, $primary-colour 0%, $secondary-colour 100%);
-    @include card-boxshadow;
+    @include card-boxshadow; 
+    position: relative;
+    z-index: 1;       
+        &:hover{   
+            &::after {
+                opacity: 1;             /*set to 1 so the layer is visible on hover*/
+            }
+        }
+        &::after{                       /*create layer that appears over the button*/
+            content:"";                 /*white mask that lightens the button on hover*/
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 2rem;
+            background-color: rgb(255,255,255, 0.1);
+            opacity: 0;                                     /*layer hidden until hover*/
+            z-index: -1;                                    /*changes stacking order so background is behind*/
+            transition: opacity $button-transition-time;    /*text but infront of original button background*/
+            @include card-hovershadow;
+        }        
 }
 
+/*selection buttons used in the fonctionnement section*/
 .select-button {
     display: flex;
     align-items: center;
-    background: $section-background;
     font-weight: bold;
-    border-radius: 1rem;
+    border-radius: 1.2rem;
     padding: 1rem;
-    margin: 1.25rem;
+    margin: $layout-gutter;
+    background: $section-background;
+    fill: $quaternary-color; /*change color of icons*/
     @include card-boxshadow;
-    &--colourmodify{
-        background: pastel($primary-colour);     
-    }
-    &__icon{  /*icon size/position*/
+    position: relative;
+    z-index: 1; 
+    &__number{  /*style for numbers on fonctionnement buttons*/
+            background: $primary-colour;
+            color: $secondary-text;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            padding-left: 8px;
+            padding-top: 3px;
+            position: relative;
+            left: -25px;
+        }
+    &__icon{  /*icons size/position*/
         @include icon-style;
-    }
+        }           
+    &--colourmodify{                            /*icon & button color modification for dégustez button*/
+        background: pastel($primary-colour);    /* alter button background color based on main colour*/
+        fill: $primary-colour;
+        }
+        &:hover{   
+            &::after {
+                opacity: 1;             /*set to 1 so the layer is visible*/
+            }
+        }
+        &::after{               /*::after places this  layer everywhere select-button selector*/
+            content:"";         /* is mentioned in the html*/
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 1.2rem;
+            background-color: rgb(255,255,255, 0.2);
+            opacity: 0;                                     /*layer hidden until hover*/
+            z-index: -1;                                    /*changes stacking order so background is behind*/
+            transition: opacity $button-transition-time;    /*text but infront of original button background*/
+            @include card-hovershadow;
+        }        
 }
+
+
 
