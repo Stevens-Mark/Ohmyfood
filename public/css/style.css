@@ -187,6 +187,17 @@ a {
   height: 173px;
   object-fit: cover;
 }
+.restaurant-card__new {
+  color: #24806a;
+  font-weight: bold;
+  background: #99E2D0;
+  padding: 8px;
+  border-radius: 3px;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  text-align: center;
+}
 .restaurant-card__description {
   /*positioning of descriptions under cards*/
   display: flex;

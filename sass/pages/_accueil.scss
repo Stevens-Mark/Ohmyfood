@@ -28,7 +28,19 @@
     border-radius: 1rem 1rem 0rem 0rem;
     height: 173px;
     object-fit: cover;
-   }
+    }
+
+    &__new{
+        color: darken($tertiary-colour, 42%);
+        font-weight: bold;
+        background: $tertiary-colour;
+        padding: 8px;
+        border-radius: 3px;
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        text-align: center;
+    }
     &__description {        /*positioning of descriptions under cards*/
         display: flex;
         justify-content: space-between;
