@@ -15,7 +15,8 @@ body {
 
 /*border-box tells the browser to account for any border and padding in the values specify for an element's width and height*/
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*set max width*/
@@ -25,6 +26,8 @@ body {
 }
 
 .d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -41,6 +44,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   /* Définition of font called Shrikhand*/
   font-family: "Shrikhand";
@@ -48,6 +52,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
 /*set heading title sizes*/
 h1 {
   font-size: 1.625rem;
@@ -73,7 +78,7 @@ a {
 
 .heart-outline {
   /* width: 100%;
-   height: 100%;*/
+     height: 100%;*/
   position: absolute;
   top: 0;
   left: 0;
@@ -86,22 +91,28 @@ a {
   height: 100%;
   position: relative;
   overflow: hidden;
-  clip-path: url(#heartfilling);
+  -webkit-clip-path: url(#heartfilling);
+          clip-path: url(#heartfilling);
 }
+
 .heart-clip:hover::before {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   opacity: 1;
 }
+
 .heart-clip::before {
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background-color: #FF79DA;
   opacity: 0;
-  transform: scale(0);
-  transition: opacity 0.9s ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: opacity .9s ease-in-out;
+  transition: opacity .9s ease-in-out;
 }
 
 /*colourful button used on each page*/
@@ -110,15 +121,19 @@ a {
   padding: 1rem;
   color: #ffff;
   /*gradient color on button based on color scheme*/
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
-  box-shadow: 0px 4px 12px 0px #d9d9d9;
+  -webkit-box-shadow: 0px 4px 12px 0px #d9d9d9;
+          box-shadow: 0px 4px 12px 0px #d9d9d9;
   position: relative;
   z-index: 1;
 }
+
 .primary-button:hover::after {
   opacity: 1;
   /*set to 1 so the layer is visible on hover*/
 }
+
 .primary-button::after {
   /*create layer that appears over the button*/
   content: "";
@@ -134,28 +149,36 @@ a {
   /*layer hidden until hover*/
   z-index: -1;
   /*changes stacking order so background is behind*/
+  -webkit-transition: opacity 1000ms;
   transition: opacity 1000ms;
   /*text but infront of original button background*/
   /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   /* x,y,blur,spread*/
 }
 
 /*selection buttons used in the fonctionnement section*/
 .select-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: bold;
   border-radius: 1.2rem;
-  padding: 1rem;
+  padding: 1.25rem;
   margin: 1.875rem;
   background: #f6f6f6;
   fill: #7e7e7e;
   /*change color of icons*/
-  box-shadow: 0px 4px 12px 0px #d9d9d9;
+  -webkit-box-shadow: 0px 4px 12px 0px #d9d9d9;
+          box-shadow: 0px 4px 12px 0px #d9d9d9;
   position: relative;
   z-index: 1;
 }
+
 .select-button__number {
   /*style for numbers on fonctionnement buttons*/
   background: #9356DC;
@@ -168,22 +191,26 @@ a {
   position: relative;
   left: -25px;
 }
+
 .select-button__icon {
   /*icons size/position*/
   width: 20px;
   height: 20px;
   margin-right: 20px;
 }
+
 .select-button--colourmodify {
   /*icon & button color modification for dégustez button*/
   background: #f4ebff;
   /* alter button background color based on main colour*/
   fill: #9356DC;
 }
+
 .select-button:hover::after {
   opacity: 1;
   /*set to 1 so the layer is visible*/
 }
+
 .select-button::after {
   /*::after places this  layer everywhere select-button selector*/
   content: "";
@@ -199,22 +226,30 @@ a {
   /*layer hidden until hover*/
   z-index: -1;
   /*changes stacking order so background is behind*/
+  -webkit-transition: opacity 1000ms;
   transition: opacity 1000ms;
   /*text but infront of original button background*/
   /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   /* x,y,blur,spread*/
 }
 
 /*SELECT SECTION: choose a resto, menu ten taste*/
 .select {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 2.875rem;
 }
 
 /*RESTAURANT SECTION*/
 .restaurants {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #f6f6f6;
   padding-top: 2.875rem;
   padding-bottom: 2.875rem;
@@ -222,23 +257,33 @@ a {
 
 /* RESTAURANT CARDS*/
 .restaurant-card {
-  flex: 1 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
   /*short hand for flex grow, flex shrink, flex-basis*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 1rem;
   background-color: #fff;
-  margin: 1.875rem;
-  box-shadow: 0px 4px 12px 0px #d9d9d9;
+  -webkit-box-shadow: 0px 4px 12px 0px #d9d9d9;
+          box-shadow: 0px 4px 12px 0px #d9d9d9;
   position: relative;
   z-index: 1;
 }
+
 .restaurant-card__photo {
   /*restaurant image styling*/
   border-radius: 1rem 1rem 0rem 0rem;
   height: 173px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+
 .restaurant-card__new {
   color: #24806a;
   font-weight: bold;
@@ -250,27 +295,38 @@ a {
   right: 13px;
   text-align: center;
 }
+
 .restaurant-card__description {
   /*positioning of descriptions under cards*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: -5px;
   padding-left: 8px;
 }
+
 .restaurant-card__description p {
   margin-top: -0.625rem;
 }
+
 .restaurant-card__heart {
   /*heart image size & position*/
   width: 20px;
   height: 20px;
   margin-right: 20px;
 }
+
 .restaurant-card:hover::before {
   opacity: 1;
   /*set to 1 so the layer is visible on hover*/
 }
+
 .restaurant-card::before {
   /*create boxshadow that appears over button*/
   content: "";
@@ -285,9 +341,11 @@ a {
   border-radius: 1rem;
   opacity: 0;
   z-index: -1;
+  -webkit-transition: opacity 1000ms;
   transition: opacity 1000ms;
   /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   /* x,y,blur,spread*/
 }
 
@@ -295,26 +353,36 @@ a {
   text-align: center;
   margin-bottom: 2.875rem;
 }
+
 .header__logo {
   padding-top: 0.9rem;
   padding-bottom: 5px;
   width: 8rem;
 }
+
 .header__banner {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #eaeaea), to(#cfcfcf));
   background-image: linear-gradient(to top, #eaeaea 90%, #cfcfcf 100%);
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .header__banner__icon {
   width: 20px;
   height: 20px;
   margin-right: 20px;
 }
+
 .header__instructions {
   padding: 2.9rem;
   /*46px*/
   background: #f6f6f6;
 }
+
 .header__instructions > p {
   color: #7e7e7e;
 }
@@ -334,6 +402,7 @@ footer img {
 .footer a {
   color: #ffffff;
 }
+
 .footer a:hover {
   color: #99E2D0;
 }
@@ -358,5 +427,4 @@ ul img {
 address {
   font-style: normal;
 }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

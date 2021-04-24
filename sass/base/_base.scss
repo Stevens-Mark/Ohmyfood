@@ -16,6 +16,16 @@ body {
     box-sizing: border-box;
   }
 
+/*set max width*/
+.header, #main, .footer{
+  max-width: 1440px;
+  margin: auto;
+}
+
 .d-flex{
   display: flex;
+}
+
+.backarrow{
+  @include icon-style;
 }

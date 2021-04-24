@@ -1,13 +1,20 @@
 {
   "name": "p3_stevens_mark",
   "version": "1.0.0",
-  "description": "OpenClassroomsProject3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+
   },
-  "author": "Mark_Stevens",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stevens-Mark/StevensMark_P3_21042021.git"
+  },
+  "author": "",
   "license": "ISC",
-  "browserslist": "last 4 versions"
+  "bugs": {
+    "url": "https://github.com/Stevens-Mark/StevensMark_P3_21042021/issues"
+  },
+  "homepage": "https://github.com/Stevens-Mark/StevensMark_P3_21042021#readme",
+  "description": ""
 }

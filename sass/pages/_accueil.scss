@@ -20,7 +20,6 @@
     flex-direction: column;
     border-radius: 1rem; 
     background-color: #fff;
-    margin: $layout-gutter;
     @include card-boxshadow;
     position: relative;
     z-index: 1;  
@@ -56,11 +55,11 @@
         @include icon-style;
     }
     &:hover{   
-        &::after {
+        &::before {
             opacity: 1;             /*set to 1 so the layer is visible on hover*/
         }
     }
-    &::after{                       /*create boxshadow that appears over button*/
+    &::before{                       /*create boxshadow that appears over button*/
         content:"";                 /*when the opacity of the layer is changed*/
         position: absolute;         /*avoids a repaint of page (no reloading) so*/
         top: 0;                     /*more efficient*/
