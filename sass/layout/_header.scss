@@ -1,3 +1,4 @@
+/*HEADER for main page*/
 .header{
     text-align: center;
     margin-bottom: $section-seperation;
@@ -6,12 +7,12 @@
             padding-bottom: 5px;
             width: $logo-width; 
         }
-    &__banner{      
+    &__banner{      /*background colour graded*/
         background-image: linear-gradient(to top, $banner-background-light 90%, $banner-background-dark 100%);
         justify-content: center;
         align-items: center;
         &__icon{
-            @include icon-style;
+            @include icon-style; /*sets the logo size a right margin*/
         }
     }
     &__instructions{

@@ -21,7 +21,8 @@ h1{
 }
 
  h2 {
-    padding-left: 1.25rem; /*20px*/
+    padding-left: $layout-gutter;
+    margin: 0px;
 }
 
   /*for all links*/

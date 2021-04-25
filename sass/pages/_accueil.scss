@@ -1,5 +1,5 @@
 
-/*SELECT SECTION: choose a resto, menu ten taste*/
+/*SELECT SECTION: choose a resto, menu then taste*/
 .select{
     flex-direction: column;
     margin-bottom: $section-seperation;
@@ -8,9 +8,10 @@
 /*RESTAURANT SECTION*/
 .restaurants{
     flex-direction: column;
+    gap: $layout-gutter;
     background-color: $section-background;
     padding-top: $section-seperation;
-    padding-bottom: $section-seperation;
+    padding-bottom: $section-seperation*1.5;
 }
 
 /* RESTAURANT CARDS*/
@@ -19,6 +20,8 @@
     display: flex;
     flex-direction: column;
     border-radius: 1rem; 
+    margin-left: $layout-gutter;
+    margin-right: $layout-gutter;
     background-color: #fff;
     @include card-boxshadow;
     position: relative;
@@ -30,7 +33,7 @@
     object-fit: cover;
     }
 
-    &__new{
+    &__new{                 /*Green "Nouveau" remark that overlays photo*/
         color: darken($tertiary-colour, 42%);
         font-weight: bold;
         background: $tertiary-colour;
@@ -55,11 +58,11 @@
         @include icon-style;
     }
     &:hover{   
-        &::before {
+        &::after {
             opacity: 1;             /*set to 1 so the layer is visible on hover*/
         }
     }
-    &::before{                       /*create boxshadow that appears over button*/
+    &::after{                       /*create boxshadow that appears over button*/
         content:"";                 /*when the opacity of the layer is changed*/
         position: absolute;         /*avoids a repaint of page (no reloading) so*/
         top: 0;                     /*more efficient*/
