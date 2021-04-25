@@ -2,12 +2,18 @@
 .primary-button {
     border-radius: 2rem;
     padding: 1rem;
+    text-align: center;
     color: $secondary-text;
     /*gradient color on button based on color scheme*/
     background-image: linear-gradient(to top, $primary-colour 0%, $secondary-colour 100%);
     @include card-boxshadow; 
     position: relative;
-    z-index: 1;       
+    z-index: 1;  
+    &--command{
+        margin-top: 1.25rem;
+        align-self: center;
+        width: 40%;
+    }     
         &:hover{   
             &::after {
                 opacity: 1;             /*set to 1 so the layer is visible on hover*/

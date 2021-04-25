@@ -4,17 +4,6 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  }
 
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Stevens-Mark/StevensMark_P3_21042021.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Stevens-Mark/StevensMark_P3_21042021/issues"
-  },
-  "homepage": "https://github.com/Stevens-Mark/StevensMark_P3_21042021#readme",
-  "description": ""
 }

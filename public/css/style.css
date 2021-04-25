@@ -29,9 +29,9 @@ body {
 }
 
 .backarrow {
-  width: 20px;
-  height: 20px;
-  margin-right: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1.25rem;
 }
 
 @font-face {
@@ -55,8 +55,16 @@ h1 {
 }
 
 h2 {
-  padding-left: 1.875rem;
-  margin: 0px;
+  padding-left: 1.25rem;
+  margin: 0rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+span {
+  font-size: 0.875rem;
 }
 
 /*for all links*/
@@ -69,12 +77,18 @@ a {
 .primary-button {
   border-radius: 2rem;
   padding: 1rem;
+  text-align: center;
   color: #ffff;
   /*gradient color on button based on color scheme*/
   background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   box-shadow: 0px 4px 12px 0px #d9d9d9;
   position: relative;
   z-index: 1;
+}
+.primary-button--command {
+  margin-top: 1.25rem;
+  align-self: center;
+  width: 40%;
 }
 .primary-button:hover::after {
   opacity: 1;
@@ -109,7 +123,7 @@ a {
   font-weight: bold;
   border-radius: 1.2rem;
   padding: 1.25rem;
-  margin: 1.875rem;
+  margin: 1.25rem;
   background: #f6f6f6;
   fill: #7e7e7e;
   /*change color of icons*/
@@ -131,9 +145,9 @@ a {
 }
 .select-button__icon {
   /*icons size/position*/
-  width: 20px;
-  height: 20px;
-  margin-right: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1.25rem;
 }
 .select-button--colourmodify {
   /*icon & button color modification for dégustez button*/
@@ -167,16 +181,99 @@ a {
   /* x,y,blur,spread*/
 }
 
+/*HEADER for main page*/
+.header {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.header__logo {
+  height: 25px;
+  margin: 0.9rem;
+}
+.header__banner {
+  /*background colour graded*/
+  background-image: linear-gradient(to top, #eaeaea 90%, #cfcfcf 100%);
+  justify-content: center;
+  align-items: center;
+}
+.header__banner__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1.25rem;
+  /*sets the logo size a right margin*/
+}
+.header__instructions {
+  padding: 2.9rem;
+  /*46px*/
+  background: #f6f6f6;
+}
+.header__instructions > p {
+  color: #7e7e7e;
+}
+
+/*HEADER components for menu pages*/
+.header__backarrow {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1.25rem;
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+}
+.header__image {
+  height: 14.375rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*FOOTER used on all pages*/
+.footer {
+  background: #353535;
+  padding: 1.25rem;
+}
+.footer img {
+  /*footer Main Ohmyfood logo size*/
+  width: 5.625rem;
+  /*90px*/
+}
+.footer ul {
+  list-style-type: none;
+  /*remove point*/
+  line-height: 1.625rem;
+  /*26px*/
+  padding-left: 0rem;
+}
+.footer ul img {
+  /*small Ohmyfood logo's sizing/postioning*/
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-right: 0.625rem;
+  position: relative;
+  top: 5px;
+}
+.footer a {
+  /*links change to third colour choice of site*/
+  color: #ffff;
+}
+.footer a:hover {
+  color: #99E2D0;
+}
+.footer address {
+  font-style: normal;
+}
+
 /*SELECT SECTION: choose a resto, menu then taste*/
 .select {
   flex-direction: column;
+  margin-top: 2.875rem;
   margin-bottom: 2.875rem;
 }
 
 /*RESTAURANT SECTION*/
 .restaurants {
   flex-direction: column;
-  gap: 1.875rem;
+  gap: 1.25rem;
   background-color: #f6f6f6;
   padding-top: 2.875rem;
   padding-bottom: 4.3125rem;
@@ -189,9 +286,9 @@ a {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  margin-left: 1.875rem;
-  margin-right: 1.875rem;
-  background-color: #fff;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  background-color: #ffff;
   box-shadow: 0px 4px 12px 0px #d9d9d9;
   position: relative;
   z-index: 1;
@@ -227,9 +324,9 @@ a {
 }
 .restaurant-card__heart {
   /*heart image size & position*/
-  width: 20px;
-  height: 20px;
-  margin-right: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1.25rem;
 }
 .restaurant-card:hover::after {
   opacity: 1;
@@ -255,71 +352,57 @@ a {
   /* x,y,blur,spread*/
 }
 
-/*HEADER for main page*/
-.header {
-  text-align: center;
-  margin-bottom: 2.875rem;
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  border-radius: 2.5rem 2.5rem 0rem 0rem;
+  margin-top: -2.5rem;
+  position: relative;
+  padding-bottom: 4.3125rem;
 }
-.header__logo {
-  padding-top: 0.9rem;
-  padding-bottom: 5px;
-  width: 8rem;
+.menu h1 {
+  padding-left: 1.25rem;
+  font-family: "Shrikhand";
 }
-.header__banner {
-  /*background colour graded*/
-  background-image: linear-gradient(to top, #eaeaea 90%, #cfcfcf 100%);
-  justify-content: center;
+.menu__header {
   align-items: center;
-}
-.header__banner__icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 20px;
-  /*sets the logo size a right margin*/
-}
-.header__instructions {
-  padding: 2.9rem;
-  /*46px*/
-  background: #f6f6f6;
-}
-.header__instructions > p {
-  color: #7e7e7e;
+  justify-content: space-between;
 }
 
-/*FOOTER used on all pages*/
-.footer {
-  background: #353535;
-  padding: 1.875rem;
+.food {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
-.footer img {
-  /*footer Main Ohmyfood logo size*/
-  width: 5.625rem;
-  /*90px*/
+.food h2 {
+  text-transform: uppercase;
+  padding-left: 1.25rem;
+  margin-top: 1.25rem;
+  font-weight: normal;
+  font-size: 1rem;
 }
-.footer ul {
-  list-style-type: none;
-  /*remove point*/
-  line-height: 1.625rem;
-  /*26px*/
-  padding-left: 0rem;
+.food h3 {
+  margin: 0px;
+  margin-bottom: 5px;
 }
-.footer ul img {
-  /*small Ohmyfood logo's sizing/postioning*/
-  width: 0.9rem;
-  height: 0.9rem;
-  margin-right: 0.625rem;
-  position: relative;
-  top: 5px;
+.food__item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  padding: 0.9rem;
+  background-color: #ffff;
+  box-shadow: 0px 4px 12px 0px #d9d9d9;
 }
-.footer a {
-  /*links change to third colour choice of site*/
-  color: #ffffff;
+.food__description {
+  display: flex;
+  justify-content: space-between;
 }
-.footer a:hover {
-  color: #99E2D0;
-}
-.footer address {
-  font-style: normal;
+
+#command {
+  align-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */

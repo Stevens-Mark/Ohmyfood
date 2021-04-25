@@ -2,6 +2,7 @@
 /*SELECT SECTION: choose a resto, menu then taste*/
 .select{
     flex-direction: column;
+    margin-top: $section-seperation;
     margin-bottom: $section-seperation;
 }
 
@@ -22,7 +23,7 @@
     border-radius: 1rem; 
     margin-left: $layout-gutter;
     margin-right: $layout-gutter;
-    background-color: #fff;
+    background-color: $card-color;
     @include card-boxshadow;
     position: relative;
     z-index: 1;  

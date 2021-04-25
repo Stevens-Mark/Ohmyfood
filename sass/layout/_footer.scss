@@ -18,7 +18,7 @@
             }
         }
     a{           /*links change to third colour choice of site*/
-        color: #ffffff;
+        color: $secondary-text;
         &:hover{
             color:$tertiary-colour;
             }
