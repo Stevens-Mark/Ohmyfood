@@ -21,11 +21,19 @@ h1{
 }
 
  h2 {
-    padding-left: 1.25rem; /*20px*/
+    padding-left: $layout-gutter;
+    margin: 0rem;
 }
 
+h3{
+  font-size: 1rem;
+}
+
+span{
+  font-size: 0.875rem;
+}
   /*for all links*/
 a{
-  color: #000;
+  color: $primary-text;
   text-decoration: none;
 }

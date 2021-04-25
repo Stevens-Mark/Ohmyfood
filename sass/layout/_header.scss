@@ -1,19 +1,18 @@
+/*HEADER for main page*/
 .header{
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    margin-bottom: $section-seperation;
+    justify-content: center;
     &__logo{
-            padding-top: 0.9rem;
-            padding-bottom: 5px;
-            width: $logo-width; 
+        height: 25px;
+        margin: 0.9rem;
         }
-    &__banner{      
+    &__banner{      /*background colour graded*/
         background-image: linear-gradient(to top, $banner-background-light 90%, $banner-background-dark 100%);
         justify-content: center;
         align-items: center;
         &__icon{
-            @include icon-style;
+            @include icon-style; /*sets the logo size a right margin*/
         }
     }
     &__instructions{
@@ -25,5 +24,17 @@
     }
 }
 
-
-
+/*HEADER components for menu pages*/
+.header{
+    &__backarrow{
+        @include icon-style;
+            position: absolute;
+            top: 1.25rem;
+            left: 1.25rem;
+    }
+    &__image{
+        height: 14.375rem;
+        width: 100%;
+        object-fit: cover;
+    }
+}

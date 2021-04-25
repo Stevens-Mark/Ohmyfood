@@ -1,0 +1,53 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    background-color: $section-background;
+    border-radius: 2.5rem 2.5rem 0rem 0rem;
+    margin-top: -2.5rem;
+    position: relative;
+    padding-bottom: $section-seperation*1.5;
+    h1{    
+        padding-left: 1.25rem;
+        font-family: "Shrikhand";
+    }
+    &__header{
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.food{
+    display: flex;
+    flex-direction: column;
+    gap: $layout-gutter;
+    
+    h2 {
+        text-transform: uppercase;
+        padding-left: 1.25rem;
+        margin-top: 1.25rem;
+        font-weight: normal;
+        font-size: 1rem;
+    }
+    h3{
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        border-radius: 1rem; 
+        margin-left: $layout-gutter;
+        margin-right: $layout-gutter;
+        padding: 0.9rem;
+        background-color: $card-color;
+        @include card-boxshadow;
+    }
+    &__description{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+#command{
+    align-self: center;
+}

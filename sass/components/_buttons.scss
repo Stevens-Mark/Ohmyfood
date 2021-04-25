@@ -2,12 +2,18 @@
 .primary-button {
     border-radius: 2rem;
     padding: 1rem;
+    text-align: center;
     color: $secondary-text;
     /*gradient color on button based on color scheme*/
     background-image: linear-gradient(to top, $primary-colour 0%, $secondary-colour 100%);
     @include card-boxshadow; 
     position: relative;
-    z-index: 1;       
+    z-index: 1;  
+    &--command{
+        margin-top: 1.25rem;
+        align-self: center;
+        width: 40%;
+    }     
         &:hover{   
             &::after {
                 opacity: 1;             /*set to 1 so the layer is visible on hover*/
@@ -21,7 +27,7 @@
             bottom: 0;
             left: 0;
             border-radius: 2rem;
-            background-color: rgb(255,255,255, 0.1);
+            background-color: rgba(255,255,255, 0.1);
             opacity: 0;                                     /*layer hidden until hover*/
             z-index: -1;                                    /*changes stacking order so background is behind*/
             transition: opacity $button-transition-time;    /*text but infront of original button background*/
@@ -35,7 +41,7 @@
     align-items: center;
     font-weight: bold;
     border-radius: 1.2rem;
-    padding: 1rem;
+    padding: 1.25rem;
     margin: $layout-gutter;
     background: $section-background;
     fill: $quaternary-color; /*change color of icons*/
@@ -60,6 +66,7 @@
         background: pastel($primary-colour);    /* alter button background color based on main colour*/
         fill: $primary-colour;
         }
+        
         &:hover{   
             &::after {
                 opacity: 1;             /*set to 1 so the layer is visible*/
@@ -73,12 +80,16 @@
             bottom: 0;
             left: 0;
             border-radius: 1.2rem;
-            background-color: rgb(255,255,255, 0.2);
+            background-color: rgba(255,255,255, 0.2);
             opacity: 0;                                     /*layer hidden until hover*/
             z-index: -1;                                    /*changes stacking order so background is behind*/
             transition: opacity $button-transition-time;    /*text but infront of original button background*/
             @include card-hovershadow;
         }        
+
+        
+        
+        
 }
 
 

@@ -1,13 +1,9 @@
 {
   "name": "p3_stevens_mark",
   "version": "1.0.0",
-  "description": "OpenClassroomsProject3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
-  },
-  "author": "Mark_Stevens",
-  "license": "ISC",
-  "browserslist": "last 4 versions"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  }
+
 }

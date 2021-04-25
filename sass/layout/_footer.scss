@@ -1,30 +1,31 @@
-.footer{
+/*FOOTER used on all pages*/
+.footer {
     background: $footerbackground;
     padding: $layout-gutter;
-}
-/*footer log size*/
-footer img{
-    width: 5.625rem; /*90px*/
-}
-/*links change to third colour choice of site*/
-.footer a{
-    color: #ffffff;
-    &:hover{
-        color:$tertiary-colour;
-    }
+    img{                  /*footer Main Ohmyfood logo size*/
+        width: 5.625rem; /*90px*/
+        }   
+    ul{
+        list-style-type: none;  /*remove point*/
+        line-height: 1.625rem; /*26px*/
+        padding-left: 0rem;
+        img{                /*small Ohmyfood logo's sizing/postioning*/
+            width: 0.9rem;
+            height: 0.9rem;
+            margin-right: 0.625rem;
+            position: relative;
+            top: 5px;
+            }
+        }
+    a{           /*links change to third colour choice of site*/
+        color: $secondary-text;
+        &:hover{
+            color:$tertiary-colour;
+            }
+        }
+    address{
+        font-style: normal;
+        }
 }
 
-ul{
-    list-style-type: none;/*remove point*/
-    line-height: 1.625rem; /*26px*/
-    padding-left: 0rem;
-}
 
-/*small logos sizing/postioning in footer*/
-ul img {
-    width: 0.9rem;
-    height: 0.9rem;
-    margin-right: 0.625rem;
-    position: relative;
-    top: 5px;
-}
