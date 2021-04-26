@@ -1,4 +1,4 @@
-/*colourful button used on each page*/
+/*Main colour gradient button used for each page*/
 .primary-button {
     border-radius: 2rem;
     padding: 1rem;
@@ -9,18 +9,18 @@
     @include card-boxshadow; 
     position: relative;
     z-index: 1;  
-    &--command{
-        margin-top: 1.25rem;
+    &--commander{           /*menu order btton*/   
         align-self: center;
         width: 40%;
+        margin-top: 1.25rem;
     }     
         &:hover{   
             &::after {
                 opacity: 1;             /*set to 1 so the layer is visible on hover*/
             }
         }
-        &::after{                       /*create layer that appears over the button*/
-            content:"";                 /*white mask that lightens the button on hover*/
+        &::after{                       /*create white mask layer that lightens*/
+            content:"";                 /* the button on hover*/
             position: absolute;
             top: 0;
             right: 0;
@@ -29,7 +29,7 @@
             border-radius: 2rem;
             background-color: rgba(255,255,255, 0.1);
             opacity: 0;                                     /*layer hidden until hover*/
-            z-index: -1;                                    /*changes stacking order so background is behind*/
+            z-index: -1;                                    /*Z-index changes stacking order so background is behind*/
             transition: opacity $button-transition-time;    /*text but infront of original button background*/
             @include card-hovershadow;
         }        
@@ -42,13 +42,13 @@
     font-weight: bold;
     border-radius: 1.2rem;
     padding: 1.25rem;
+    fill: $quaternary-color;    /*primary color of icons*/
+    @include card-boxshadow;
     margin: $layout-gutter;
     background: $section-background;
-    fill: $quaternary-color; /*change color of icons*/
-    @include card-boxshadow;
     position: relative;
     z-index: 1; 
-    &__number{  /*style for numbers on fonctionnement buttons*/
+    &__number{                  /*style for numbers on fonctionnement buttons*/
             background: $primary-colour;
             color: $secondary-text;
             border-radius: 50%;
@@ -59,7 +59,7 @@
             position: relative;
             left: -25px;
         }
-    &__icon{  /*icons size/position*/
+    &__icon{                  /* button icons size/position*/
         @include icon-style;
         }           
     &--colourmodify{                            /*icon & button color modification for dégustez button*/
@@ -72,8 +72,8 @@
                 opacity: 1;             /*set to 1 so the layer is visible*/
             }
         }
-        &::after{               /*::after places this  layer everywhere select-button selector*/
-            content:"";         /* is mentioned in the html*/
+        &::after{               /*::after places this "white mask" layer everywhere the select-button*/
+            content:"";         /* selector is mentioned in the html*/
             position: absolute;
             top: 0;
             right: 0;
@@ -85,11 +85,7 @@
             z-index: -1;                                    /*changes stacking order so background is behind*/
             transition: opacity $button-transition-time;    /*text but infront of original button background*/
             @include card-hovershadow;
-        }        
-
-        
-        
-        
+        }               
 }
 
 

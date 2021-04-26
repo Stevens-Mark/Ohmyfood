@@ -28,12 +28,6 @@ body {
   display: flex;
 }
 
-.backarrow {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-right: 1.25rem;
-}
-
 @font-face {
   /* Définition of font called Roboto*/
   font-family: "Roboto";
@@ -73,7 +67,7 @@ a {
   text-decoration: none;
 }
 
-/*colourful button used on each page*/
+/*Main colour gradient button used for each page*/
 .primary-button {
   border-radius: 2rem;
   padding: 1rem;
@@ -85,19 +79,20 @@ a {
   position: relative;
   z-index: 1;
 }
-.primary-button--command {
-  margin-top: 1.25rem;
+.primary-button--commander {
+  /*menu order btton*/
   align-self: center;
   width: 40%;
+  margin-top: 1.25rem;
 }
 .primary-button:hover::after {
   opacity: 1;
   /*set to 1 so the layer is visible on hover*/
 }
 .primary-button::after {
-  /*create layer that appears over the button*/
+  /*create white mask layer that lightens*/
   content: "";
-  /*white mask that lightens the button on hover*/
+  /* the button on hover*/
   position: absolute;
   top: 0;
   right: 0;
@@ -108,7 +103,7 @@ a {
   opacity: 0;
   /*layer hidden until hover*/
   z-index: -1;
-  /*changes stacking order so background is behind*/
+  /*Z-index changes stacking order so background is behind*/
   transition: opacity 1000ms;
   /*text but infront of original button background*/
   /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
@@ -123,11 +118,11 @@ a {
   font-weight: bold;
   border-radius: 1.2rem;
   padding: 1.25rem;
+  fill: #7e7e7e;
+  /*primary color of icons*/
+  box-shadow: 0px 4px 12px 0px #d9d9d9;
   margin: 1.25rem;
   background: #f6f6f6;
-  fill: #7e7e7e;
-  /*change color of icons*/
-  box-shadow: 0px 4px 12px 0px #d9d9d9;
   position: relative;
   z-index: 1;
 }
@@ -144,7 +139,7 @@ a {
   left: -25px;
 }
 .select-button__icon {
-  /*icons size/position*/
+  /* button icons size/position*/
   width: 1.25rem;
   height: 1.25rem;
   margin-right: 1.25rem;
@@ -160,9 +155,9 @@ a {
   /*set to 1 so the layer is visible*/
 }
 .select-button::after {
-  /*::after places this  layer everywhere select-button selector*/
+  /*::after places this "white mask" layer everywhere the select-button*/
   content: "";
-  /* is mentioned in the html*/
+  /* selector is mentioned in the html*/
   position: absolute;
   top: 0;
   right: 0;
@@ -193,15 +188,15 @@ a {
 }
 .header__banner {
   /*background colour graded*/
-  background-image: linear-gradient(to top, #eaeaea 90%, #cfcfcf 100%);
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to top, #eaeaea 90%, #cfcfcf 100%);
 }
 .header__banner__icon {
   width: 1.25rem;
   height: 1.25rem;
   margin-right: 1.25rem;
-  /*sets the logo size a right margin*/
+  /*sets the logo size & a right margin*/
 }
 .header__instructions {
   padding: 2.9rem;
@@ -238,6 +233,8 @@ a {
   /*90px*/
 }
 .footer ul {
+  flex-direction: column;
+  justify-content: space-between;
   list-style-type: none;
   /*remove point*/
   line-height: 1.625rem;
@@ -260,7 +257,12 @@ a {
   color: #99E2D0;
 }
 .footer address {
+  /*address balise in footer, reset set font*/
   font-style: normal;
+}
+
+#main {
+  flex-direction: column;
 }
 
 /*SELECT SECTION: choose a resto, menu then taste*/
@@ -270,8 +272,8 @@ a {
   margin-bottom: 2.875rem;
 }
 
-/*RESTAURANT SECTION*/
-.restaurants {
+/*RESTAURANTS SECTION*/
+.restaurant-container {
   flex-direction: column;
   gap: 1.25rem;
   background-color: #f6f6f6;
@@ -299,7 +301,7 @@ a {
   height: 173px;
   object-fit: cover;
 }
-.restaurant-card__new {
+.restaurant-card__photo--nouveau {
   /*Green "Nouveau" remark that overlays photo*/
   color: #24806a;
   font-weight: bold;
@@ -352,6 +354,7 @@ a {
   /* x,y,blur,spread*/
 }
 
+/*Restaurant Menu Section*/
 .menu {
   display: flex;
   flex-direction: column;
@@ -370,6 +373,7 @@ a {
   justify-content: space-between;
 }
 
+/*Food Menu cards*/
 .food {
   display: flex;
   flex-direction: column;
@@ -377,10 +381,20 @@ a {
 }
 .food h2 {
   text-transform: uppercase;
-  padding-left: 1.25rem;
-  margin-top: 1.25rem;
   font-weight: normal;
   font-size: 1rem;
+  padding-left: 1.25rem;
+  margin-top: 1.25rem;
+}
+.food h2::after {
+  /*palce line under food headings*/
+  content: "";
+  display: block;
+  /* so the element starts on anew line*/
+  border-bottom: 4px solid #99E2D0;
+  width: 2.5rem;
+  position: relative;
+  bottom: -3px;
 }
 .food h3 {
   margin: 0px;
@@ -390,19 +404,15 @@ a {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
   padding: 0.9rem;
   background-color: #ffff;
   box-shadow: 0px 4px 12px 0px #d9d9d9;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 .food__description {
   display: flex;
   justify-content: space-between;
-}
-
-#command {
-  align-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */

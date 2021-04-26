@@ -8,11 +8,11 @@
         margin: 0.9rem;
         }
     &__banner{      /*background colour graded*/
-        background-image: linear-gradient(to top, $banner-background-light 90%, $banner-background-dark 100%);
         justify-content: center;
         align-items: center;
+        background-image: linear-gradient(to top, $banner-background-light 90%, $banner-background-dark 100%);
         &__icon{
-            @include icon-style; /*sets the logo size a right margin*/
+            @include icon-style; /*sets the logo size & a right margin*/
         }
     }
     &__instructions{
