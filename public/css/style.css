@@ -2,6 +2,7 @@
 /*returns the pastel colour a given colour*/
 /*mixins for the button/card shadow effects*/
 /* icon sizing*/
+/*calculates the delay between each card based on the number of cards & the total time of animation*/
 @keyframes fadein {
   from {
     opacity: 0;
@@ -12,6 +13,10 @@
     transform: translateY(0);
   }
 }
+/*@keyframes slidein {
+    from { opacity: 0; transform: translateX(10%); }
+    to   { opacity: 1;  transform: translateX(0);}
+}*/
 /* HEADER */
 /* Main elements of the page */
 html,
@@ -438,16 +443,21 @@ a {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
   opacity: 0;
+  /*start with cards invisible*/
   animation: fadein 1s forwards ease-in-out;
+  /*loop dynamically generates the card's selector name/number & time delay*/
 }
 .food__item--1 {
   animation-delay: 0.3333333333s;
+  /*card time delay based on it's position, ie fractionnof the total time x1, x2, x3...*/
 }
 .food__item--2 {
   animation-delay: 0.6666666667s;
+  /*card time delay based on it's position, ie fractionnof the total time x1, x2, x3...*/
 }
 .food__item--3 {
   animation-delay: 1s;
+  /*card time delay based on it's position, ie fractionnof the total time x1, x2, x3...*/
 }
 .food__description {
   display: flex;
@@ -459,6 +469,11 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.food__tick {
+  height: 60px;
+  width: 60px;
+  background: #99E2D0;
 }
 
 /*# sourceMappingURL=style.css.map */

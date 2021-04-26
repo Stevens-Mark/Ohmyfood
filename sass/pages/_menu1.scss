@@ -57,11 +57,12 @@
         @include card-boxshadow;
         margin-left: $layout-gutter;
         margin-right: $layout-gutter;
-        opacity: 0;
+        opacity: 0;         /*start with cards invisible*/
         animation: fadein $card-animation-time forwards ease-in-out;
+        /*loop dynamically generates the card's selector name/number & time delay*/
         @for $i from 1 through $number-of-cards {
             &--#{$i} {
-                animation-delay: $time-delay * $i;
+                animation-delay: $time-delay * $i;  /*card time delay based on it's position, ie fractionnof the total time x1, x2, x3...*/
             }
         }
     }
@@ -75,6 +76,11 @@
             text-overflow: ellipsis;
         }
     }
+    &__tick{
+        height: 60px;
+        width: 60px;
+        background: $tertiary-colour;
+        }
 }
 
 
