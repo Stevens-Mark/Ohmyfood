@@ -1,0 +1,11 @@
+
+$number-of-cards: 3;
+$card-animation-time: 1s;
+$time-delay: $card-animation-time / $number-of-cards;
+
+
+@keyframes fadein {
+    from { opacity: 0; transform: translateY(10%); }
+    to   { opacity: 1;  transform: translateY(0);}
+}
+

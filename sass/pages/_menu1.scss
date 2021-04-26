@@ -21,7 +21,8 @@
 .food{
     display: flex;
     flex-direction: column;
-    gap: $layout-gutter;  
+    gap: $layout-gutter; 
+    
     h2 {
         text-transform: uppercase;
         font-weight: normal;
@@ -56,6 +57,13 @@
         @include card-boxshadow;
         margin-left: $layout-gutter;
         margin-right: $layout-gutter;
+        opacity: 0;
+        animation: fadein $card-animation-time forwards ease-in-out;
+        @for $i from 1 through $number-of-cards {
+            &--#{$i} {
+                animation-delay: $time-delay * $i;
+            }
+        }
     }
     &__description{
         display: flex;
