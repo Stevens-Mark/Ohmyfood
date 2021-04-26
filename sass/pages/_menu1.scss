@@ -40,6 +40,12 @@
     h3{
         margin: 0px;
         margin-bottom: 5px;
+        /*truncates the heading if needed*/
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+        min-width: 0;
     }
     &__item{
         display: flex;
@@ -54,5 +60,14 @@
     &__description{
         display: flex;
         justify-content: space-between;
+        &--truncate{/*truncates the text if needed*/ 
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }
+
+
+  
