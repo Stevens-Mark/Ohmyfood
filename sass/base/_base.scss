@@ -17,7 +17,7 @@ body {
   }
 
 /*set max width*/
-.header, #main, .footer{
+.header, .main, .footer{
   max-width: 1440px;
   margin: auto;
 }
@@ -26,6 +26,3 @@ body {
   display: flex;
 }
 
-.backarrow{
-  @include icon-style;
-}

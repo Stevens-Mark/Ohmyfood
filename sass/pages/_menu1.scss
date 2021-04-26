@@ -1,3 +1,4 @@
+/*Restaurant Menu Section*/
 .menu{
     display: flex;
     flex-direction: column;
@@ -16,17 +17,25 @@
     }
 }
 
+/*Food Menu cards*/
 .food{
     display: flex;
     flex-direction: column;
-    gap: $layout-gutter;
-    
+    gap: $layout-gutter;  
     h2 {
         text-transform: uppercase;
-        padding-left: 1.25rem;
-        margin-top: 1.25rem;
         font-weight: normal;
         font-size: 1rem;
+        padding-left: 1.25rem;
+        margin-top: 1.25rem;
+        &::after{           /*palce line under food headings*/
+            content:"";
+            display:block; /* so the element starts on anew line*/
+            border-bottom: 4px solid $tertiary-colour;
+            width: 2.5rem;
+            position: relative;
+            bottom: -3px;
+        }
     }
     h3{
         margin: 0px;
@@ -36,18 +45,14 @@
         display: flex;
         flex-direction: column;
         border-radius: 1rem; 
-        margin-left: $layout-gutter;
-        margin-right: $layout-gutter;
         padding: 0.9rem;
         background-color: $card-color;
         @include card-boxshadow;
+        margin-left: $layout-gutter;
+        margin-right: $layout-gutter;
     }
     &__description{
         display: flex;
         justify-content: space-between;
     }
-}
-
-#command{
-    align-self: center;
 }

@@ -6,16 +6,16 @@
     &__logo{
         height: 25px;
         margin: 0.9rem;
-        }
+         }
     &__banner{      /*background colour graded*/
-        background-image: linear-gradient(to top, $banner-background-light 90%, $banner-background-dark 100%);
         justify-content: center;
         align-items: center;
+        background-image: linear-gradient(to top, $banner-background-light 90%, $banner-background-dark 100%);
         &__icon{
-            @include icon-style; /*sets the logo size a right margin*/
+            @include icon-style; /*sets the logo size*/
         }
     }
-    &__instructions{
+    &__instructions{    /*declare the style for the header instructions*/
         padding: 2.9rem; /*46px*/   
         background: $section-background;
         >p{
@@ -26,15 +26,23 @@
 
 /*HEADER components for menu pages*/
 .header{
-    &__backarrow{
-        @include icon-style;
-            position: absolute;
-            top: 1.25rem;
-            left: 1.25rem;
+    &__menu-banner{
+        align-items: center;
+        justify-content: center;
+        &__backarrow{       /*back to home page arrow*/
+            @include icon-style;
+            margin-left: 1.25rem;
+        }
+        &__image{       /*menu header image*/
+            height: 14.375rem;
+            width: 100%;
+            object-fit: cover;
+        }
     }
-    &__image{
-        height: 14.375rem;
-        width: 100%;
-        object-fit: cover;
+    &__logo--resize{ /*resize & reposition ohmyfood logo*/
+        margin-right: 1.25rem;
+        margin-left: 0rem;
+        flex: 2;
     }
+
 }

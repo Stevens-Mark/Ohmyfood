@@ -1,3 +1,6 @@
+#main{
+    flex-direction: column;
+}
 
 /*SELECT SECTION: choose a resto, menu then taste*/
 .select{
@@ -6,8 +9,8 @@
     margin-bottom: $section-seperation;
 }
 
-/*RESTAURANT SECTION*/
-.restaurants{
+/*RESTAURANTS SECTION*/
+.restaurant-container{
     flex-direction: column;
     gap: $layout-gutter;
     background-color: $section-background;
@@ -32,19 +35,19 @@
     border-radius: 1rem 1rem 0rem 0rem;
     height: 173px;
     object-fit: cover;
+        &--nouveau{                 /*Green "Nouveau" remark that overlays photo*/
+            color: darken($tertiary-colour, 42%);
+            font-weight: bold;
+            background: $tertiary-colour;
+            padding: 8px;
+            border-radius: 3px;
+            position: absolute;
+            top: 13px;
+            right: 13px;
+            text-align: center;
+        }
     }
 
-    &__new{                 /*Green "Nouveau" remark that overlays photo*/
-        color: darken($tertiary-colour, 42%);
-        font-weight: bold;
-        background: $tertiary-colour;
-        padding: 8px;
-        border-radius: 3px;
-        position: absolute;
-        top: 13px;
-        right: 13px;
-        text-align: center;
-    }
     &__description {        /*positioning of descriptions under cards*/
         display: flex;
         justify-content: space-between;
@@ -57,6 +60,7 @@
     }
     &__heart{      /*heart image size & position*/
         @include icon-style;
+        margin-right: 1.25rem;
     }
     &:hover{   
         &::after {
