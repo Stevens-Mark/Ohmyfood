@@ -61,6 +61,7 @@
         }
     &__icon{                  /* button icons size/position*/
         @include icon-style;
+        margin-right: 1.25rem;
         }           
     &--colourmodify{                            /*icon & button color modification for dégustez button*/
         background: pastel($primary-colour);    /* alter button background color based on main colour*/

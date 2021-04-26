@@ -1,6 +1,7 @@
 @charset "UTF-8";
+/*returns the pastel colour a given colour*/
 /*mixins for the button/card shadow effects*/
-/* icon sizing & postioning*/
+/* icon sizing*/
 /* HEADER */
 /* Main elements of the page */
 html,
@@ -19,7 +20,7 @@ body {
 }
 
 /*set max width*/
-.header, #main, .footer {
+.header, .main, .footer {
   max-width: 1440px;
   margin: auto;
 }
@@ -57,6 +58,7 @@ h3 {
   font-size: 1rem;
 }
 
+/*other text*/
 span {
   font-size: 0.875rem;
 }
@@ -195,10 +197,10 @@ a {
 .header__banner__icon {
   width: 1.25rem;
   height: 1.25rem;
-  margin-right: 1.25rem;
-  /*sets the logo size & a right margin*/
+  /*sets the logo size*/
 }
 .header__instructions {
+  /*declare the style for the header instructions*/
   padding: 2.9rem;
   /*46px*/
   background: #f6f6f6;
@@ -208,18 +210,27 @@ a {
 }
 
 /*HEADER components for menu pages*/
-.header__backarrow {
+.header__menu-banner {
+  align-items: center;
+  justify-content: center;
+}
+.header__menu-banner__backarrow {
+  /*back to home page arrow*/
   width: 1.25rem;
   height: 1.25rem;
-  margin-right: 1.25rem;
-  position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
+  margin-left: 1.25rem;
 }
-.header__image {
+.header__menu-banner__image {
+  /*menu header image*/
   height: 14.375rem;
   width: 100%;
   object-fit: cover;
+}
+.header__logo--resize {
+  /*resize & reposition ohmyfood logo*/
+  margin-right: 1.25rem;
+  margin-left: 0rem;
+  flex: 2;
 }
 
 /*FOOTER used on all pages*/

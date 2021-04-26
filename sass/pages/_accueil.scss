@@ -60,6 +60,7 @@
     }
     &__heart{      /*heart image size & position*/
         @include icon-style;
+        margin-right: 1.25rem;
     }
     &:hover{   
         &::after {
