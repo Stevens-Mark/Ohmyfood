@@ -198,6 +198,7 @@ a {
   width: 1.25rem;
   height: 1.25rem;
   /*sets the logo size*/
+  margin-right: 1.25rem;
 }
 .header__instructions {
   /*declare the style for the header instructions*/
@@ -410,6 +411,12 @@ a {
 .food h3 {
   margin: 0px;
   margin-bottom: 5px;
+  /*truncates the heading if needed*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
 }
 .food__item {
   display: flex;
@@ -424,6 +431,13 @@ a {
 .food__description {
   display: flex;
   justify-content: space-between;
+}
+.food__description--truncate {
+  /*truncates the text if needed*/
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*# sourceMappingURL=style.css.map */

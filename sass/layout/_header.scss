@@ -13,6 +13,7 @@
         background-image: linear-gradient(to top, $banner-background-light 90%, $banner-background-dark 100%);
         &__icon{
             @include icon-style; /*sets the logo size*/
+            margin-right: 1.25rem;
         }
     }
     &__instructions{    /*declare the style for the header instructions*/
