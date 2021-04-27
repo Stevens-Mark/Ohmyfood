@@ -1,8 +1,9 @@
 @charset "UTF-8";
-/*returns the pastel colour a given colour*/
+/*returns the pastel colour of a given colour*/
 /*mixins for the button/card shadow effects*/
 /* icon sizing*/
 /*calculates the delay between each card based on the number of cards & the total time of animation*/
+/*animation to fade in menu items on retaurant menu pages*/
 @keyframes fadein {
   from {
     opacity: 0;
@@ -13,10 +14,6 @@
     transform: translateY(0);
   }
 }
-/*@keyframes slidein {
-    from { opacity: 0; transform: translateX(10%); }
-    to   { opacity: 1;  transform: translateX(0);}
-}*/
 /* HEADER */
 /* Main elements of the page */
 html,
@@ -434,34 +431,51 @@ a {
   min-width: 0;
 }
 .food__item {
-  display: flex;
-  flex-direction: column;
   border-radius: 1rem;
   padding: 0.9rem;
   background-color: #ffff;
   box-shadow: 0px 4px 12px 0px #d9d9d9;
   margin-left: 1.25rem;
   margin-right: 1.25rem;
+  overflow: hidden;
+  /*hides check tick icon when not in view*/
   opacity: 0;
   /*start with cards invisible*/
   animation: fadein 1s forwards ease-in-out;
   /*loop dynamically generates the card's selector name/number & time delay*/
+  /*decrease the size of the description container by the same amount the tick icon moves to the left to give the illusion that it pushes the price to the left*/
 }
 .food__item--1 {
   animation-delay: 0.3333333333s;
-  /*card time delay based on it's position, ie fractionnof the total time x1, x2, x3...*/
+  /*card time delay based on it's position, ie fractionn of the total time x1, x2, x3...*/
 }
 .food__item--2 {
   animation-delay: 0.6666666667s;
-  /*card time delay based on it's position, ie fractionnof the total time x1, x2, x3...*/
+  /*card time delay based on it's position, ie fractionn of the total time x1, x2, x3...*/
 }
 .food__item--3 {
   animation-delay: 1s;
-  /*card time delay based on it's position, ie fractionnof the total time x1, x2, x3...*/
+  /*card time delay based on it's position, ie fractionn of the total time x1, x2, x3...*/
+}
+.food__item:hover .food__tickbox {
+  /*slide check tick icon into view from right on hover*/
+  transform: translateX(0rem);
+}
+.food__item:hover .food__tickbox__logo {
+  transform: rotate(360deg);
+  /*rotate check tick icon at the same time as slide in on hover*/
+}
+.food__item:hover .food__description {
+  width: calc(100% - 4.375rem);
+  /*70px*/
+  transition: width 500ms ease-in-out;
 }
 .food__description {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  /*increase the description container width at the same rate the tick icon moves back to the right to give a smooth transition back to start*/
+  transition: width 500ms ease-in-out;
 }
 .food__description--truncate {
   /*truncates the text if needed*/
@@ -469,11 +483,39 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  /*replaces text with ellipsis (3 dots) when not enough space*/
 }
-.food__tick {
-  height: 60px;
-  width: 60px;
+.food__tickbox {
+  /*green check tick box container styling & postioning*/
+  width: 4.375rem;
+  /*70px*/
+  height: 4.375rem;
   background: #99E2D0;
+  border-radius: 0rem 1rem 1rem 0rem;
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  right: 0rem;
+  transform: translateX(4.375rem);
+  /*animation transform start positions: off right hidden out of view*/
+  transition: transform 500ms ease-in-out;
+}
+.food__tickbox__logo {
+  /*white check tick on green backgound styling & postioning*/
+  height: 2.813rem;
+  /*45px*/
+  width: 2.813rem;
+  padding: 0.625rem;
+  color: #ffff;
+  background: #99E2D0;
+  position: absolute;
+  top: 0.75rem;
+  bottom: 0rem;
+  right: 0.75rem;
+  border-radius: 50%;
+  transform: rotate(-360deg);
+  /*animation transform start positions*/
+  transition: transform 500ms ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

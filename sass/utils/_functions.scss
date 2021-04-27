@@ -1,4 +1,4 @@
-/*returns the pastel colour a given colour*/
+/*returns the pastel colour of a given colour*/
 @function pastel($clr){
     $hue:hue($clr);
     $sat:100%;
