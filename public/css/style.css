@@ -83,6 +83,7 @@ a {
 
 /*Main colour gradient button used for each page*/
 .primary-button {
+  cursor: pointer;
   border-radius: 2rem;
   padding: 1rem;
   text-align: center;
@@ -118,7 +119,7 @@ a {
   /*layer hidden until hover*/
   z-index: -1;
   /*Z-index changes stacking order so background is behind*/
-  transition: opacity 1000ms;
+  transition: opacity 500ms;
   /*text but infront of original button background*/
   /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -130,6 +131,7 @@ a {
   display: flex;
   align-items: center;
   font-weight: bold;
+  cursor: pointer;
   border-radius: 1.2rem;
   padding: 1.25rem;
   fill: #7e7e7e;
@@ -183,7 +185,7 @@ a {
   /*layer hidden until hover*/
   z-index: -1;
   /*changes stacking order so background is behind*/
-  transition: opacity 1000ms;
+  transition: opacity 500ms;
   /*text but infront of original button background*/
   /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -349,10 +351,23 @@ a {
   margin-top: -0.625rem;
 }
 .restaurant-card__heart {
-  /*heart image size & position*/
+  /*heart image outline size & position*/
   width: 1.25rem;
   height: 1.25rem;
   margin-right: 1.25rem;
+}
+.restaurant-card__heartgraded {
+  /*gradient heart image size & position*/
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1.25rem;
+  opacity: 0;
+}
+.restaurant-card__heartgraded:hover {
+  /*heart "fills" up on hover*/
+  opacity: 1;
+  transition: 500ms ease-in-out;
 }
 .restaurant-card:hover::after {
   opacity: 1;
@@ -372,7 +387,7 @@ a {
   border-radius: 1rem;
   opacity: 0;
   z-index: -1;
-  transition: opacity 1000ms;
+  transition: opacity 500ms;
   /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   /* x,y,blur,spread*/
@@ -395,6 +410,25 @@ a {
 .menu__header {
   align-items: center;
   justify-content: space-between;
+}
+.menu__heart {
+  /*heart image outline size & position*/
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1.25rem;
+}
+.menu__heartgraded {
+  /*gradient heart image size & position*/
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1.25rem;
+  opacity: 0;
+}
+.menu__heartgraded:hover {
+  /*heart "fills" up on hover*/
+  opacity: 1;
+  transition: 500ms ease-in-out;
 }
 
 /*Food Menu cards*/
@@ -434,6 +468,7 @@ a {
   border-radius: 1rem;
   padding: 0.9rem;
   background-color: #ffff;
+  cursor: pointer;
   box-shadow: 0px 4px 12px 0px #d9d9d9;
   margin-left: 1.25rem;
   margin-right: 1.25rem;

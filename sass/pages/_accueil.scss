@@ -30,7 +30,6 @@
     @include card-boxshadow;
     position: relative;
     z-index: 1;  
-
     &__photo{               /*restaurant image styling*/
     border-radius: 1rem 1rem 0rem 0rem;
     height: 173px;
@@ -58,9 +57,19 @@
             margin-top: -0.625rem;
         }
     }
-    &__heart{      /*heart image size & position*/
+    &__heart{      /*heart image outline size & position*/
+        @include icon-style;
+        margin-right: 1.25rem; 
+    }
+    &__heartgraded{      /*gradient heart image size & position*/
+        position: absolute;
         @include icon-style;
         margin-right: 1.25rem;
+        opacity: 0;
+        &:hover {       /*heart "fills" up on hover*/
+            opacity: 1;
+            transition: $transition-timing ease-in-out;
+        }
     }
     &:hover{   
         &::after {
@@ -77,7 +86,7 @@
         border-radius: 1rem;
         opacity: 0;                                    
         z-index: -1;                                   
-        transition: opacity $button-transition-time;   
+        transition: opacity $transition-timing;   
         @include card-hovershadow;
     }      
 }
