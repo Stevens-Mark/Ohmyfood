@@ -44,6 +44,7 @@
     cursor: pointer;
     border-radius: 1.2rem;
     padding: 1.25rem;
+    width: 90%;
     fill: $quaternary-color;    /*primary color of icons*/
     @include card-boxshadow;
     margin: $layout-gutter;
@@ -56,8 +57,9 @@
             border-radius: 50%;
             width: 25px;
             height: 25px;
-            padding-left: 8px;
-            padding-top: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
             left: -25px;
         }
@@ -88,7 +90,10 @@
             z-index: -1;                                    /*changes stacking order so background is behind*/
             transition: opacity $transition-timing;    /*text but infront of original button background*/
             @include card-hovershadow;
-        }               
+        }
+    @media (min-width: 600px){
+            width: 75%;
+        }                
 }
 
 

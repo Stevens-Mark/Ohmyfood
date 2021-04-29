@@ -11,12 +11,13 @@
         list-style-type: none;  /*remove point*/
         line-height: 1.625rem; /*26px*/
         padding-left: 0rem;
-        img{                /*smaller logo's sizing/postioning*/
+        @media (min-width: 600px){
+            flex-direction: row;
+            }
+        img{                /*smaller logo's sizing/positioning*/
             width: 0.9rem;
             height: 0.9rem;
             margin-right: 0.625rem;
-            position: relative;
-            top: 5px;
             }
         }
 

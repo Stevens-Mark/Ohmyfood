@@ -31,12 +31,11 @@ body {
   box-sizing: border-box;
 }
 
-/*set max width*/
-.header, .main, .footer {
+/*set max width
+.header, .main, .footer{
   max-width: 1440px;
   margin: auto;
-}
-
+}*/
 .d-flex {
   display: flex;
 }
@@ -137,6 +136,7 @@ a {
   cursor: pointer;
   border-radius: 1.2rem;
   padding: 1.25rem;
+  width: 90%;
   fill: #7e7e7e;
   /*primary color of icons*/
   box-shadow: 0px 4px 12px 0px #d9d9d9;
@@ -152,8 +152,9 @@ a {
   border-radius: 50%;
   width: 25px;
   height: 25px;
-  padding-left: 8px;
-  padding-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   left: -25px;
 }
@@ -193,6 +194,11 @@ a {
   /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   /* x,y,blur,spread*/
+}
+@media (min-width: 600px) {
+  .select-button {
+    width: 75%;
+  }
 }
 
 /*HEADER for main page*/
@@ -273,13 +279,16 @@ a {
   /*26px*/
   padding-left: 0rem;
 }
+@media (min-width: 600px) {
+  .footer ul {
+    flex-direction: row;
+  }
+}
 .footer ul img {
-  /*smaller logo's sizing/postioning*/
+  /*smaller logo's sizing/positioning*/
   width: 0.9rem;
   height: 0.9rem;
   margin-right: 0.625rem;
-  position: relative;
-  top: 5px;
 }
 .footer a {
   color: #ffff;
@@ -296,7 +305,13 @@ a {
 /*SELECT SECTION: choose a resto, menu then taste*/
 .select {
   flex-direction: column;
+  align-items: center;
   margin-bottom: 2.875rem;
+}
+@media (min-width: 925px) {
+  .select {
+    flex-direction: row;
+  }
 }
 
 /*RESTAURANTS SECTION*/
@@ -313,11 +328,24 @@ a {
   padding-top: 1.4375rem;
   padding-bottom: 4.3125rem;
 }
+@media (min-width: 600px) {
+  .restaurant-container {
+    gap: 1.25rem;
+    flex-flow: row wrap;
+  }
+}
+@media (min-width: 925px) {
+  .restaurant-container {
+    gap: 0rem;
+    flex-wrap: nowrap;
+  }
+}
 
 /* RESTAURANT CARDS*/
 .restaurant-card {
-  flex: 1 1;
+  flex: 1 1 255px;
   /*short hand for flex grow, flex shrink, flex-basis*/
+  min-width: 190px;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
