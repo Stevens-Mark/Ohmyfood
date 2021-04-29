@@ -55,13 +55,13 @@
             background: $primary-colour;
             color: $secondary-text;
             border-radius: 50%;
-            width: 25px;
-            height: 25px;
+            width: 1.563rem;  /*25*/
+            height: 1.563rem; 
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            left: -25px;
+            left: -1.563rem; 
         }
     &__icon{                  /* button icons size/position*/
         @include icon-style;

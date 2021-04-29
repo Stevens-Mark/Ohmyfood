@@ -28,20 +28,14 @@
             opacity: 1;
             transition: $transition-timing ease-in-out;
             }
-        }        
-}
-
-/*Food Menu cards*/
-.food{
-    display: flex;
-    flex-direction: column;
-    gap: $layout-gutter; 
+        }
     h2 {
         text-transform: uppercase;
         font-weight: normal;
         font-size: 1rem;
         padding-left: 1.2rem;
         margin-top: 2rem;
+        margin-bottom: 1.25rem;
         &::after{           /*place line under food headings*/
             content:"";
             display:block; /* so the element starts on anew line*/
@@ -50,7 +44,18 @@
             position: relative;
             bottom: -3px;
             }
-        }
+        }             
+}
+
+/*Food Menu cards*/
+.food{
+    display: flex;
+    flex-direction: column;
+    gap: $layout-gutter;
+    @media (min-width: 1024px){
+        flex-direction: row;
+        gap:0rem;
+    }    
     h3{
         margin: 0px;
         margin-bottom: 5px;
@@ -70,6 +75,7 @@
         @include card-boxshadow;
         margin-left: $layout-gutter;
         margin-right: $layout-gutter;
+        flex: 1;
         overflow: hidden;   /*hides check tick icon when not in view*/
         opacity: 0;         /*start with cards invisible*/
         animation: fadein $card-animation-time forwards ease-in-out;
@@ -90,7 +96,7 @@
             transition: width $transition-timing ease-in-out;
             }
         }
-    &__description{
+        &__description{
         display: flex;
         justify-content: space-between;  
         width: 100%;  /*increase the description container width at the same rate the tick icon moves back to the right to give a smooth transition back to start*/
@@ -102,7 +108,7 @@
                 text-overflow: ellipsis;  /*replaces text with ellipsis (3 dots) when not enough space*/
             }
         }
-    &__tickbox{             /*green check tick box container styling & postioning*/
+        &__tickbox{             /*green check tick box container styling & postioning*/
             width: 4.375rem; /*70px*/
             height: 4.375rem;
             background: $tertiary-colour;
@@ -126,8 +132,8 @@
                     border-radius: 50%;
                     transform: rotate(-360deg);     /*animation transform start positions*/
                     transition: transform $transition-timing ease-in-out;
-                }          
-            }            
+                }
+    }            
 }
 
 

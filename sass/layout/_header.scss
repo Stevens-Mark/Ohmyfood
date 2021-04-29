@@ -4,9 +4,15 @@
     text-align: center;
     justify-content: center;
     &__logo{
-        height: 25px;
+        height: 1.563rem; /*25px*/
         margin: 0.9rem;
-         }
+        @media (min-width: 600px){
+            height: 3.438rem;       /*55px*/
+        }
+        @media (min-width: 925px) {
+            height: 4.375rem;       /*70px*/
+            }
+        }
     &__banner{      /*background colour graded*/
         justify-content: center;
         align-items: center;
@@ -43,10 +49,9 @@
             object-fit: cover;
         }
     }
-    &__logo--resize{ /*resize & reposition ohmyfood logo*/
+    &__logo--adjust{ /*reposition ohmyfood logo slightly*/
         margin-right: 1.25rem;
         margin-left: 0rem;
-        flex: 2;
+        flex: 1;        /*set flex:1 to take up all available space*/
     }
-
 }
