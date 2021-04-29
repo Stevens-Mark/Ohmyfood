@@ -12,8 +12,8 @@
     z-index: 1;  
     &--commander{           /*menu order  ("commander") button*/   
         align-self: center;
-        width: 40%;
-        margin-top: 1.25rem;
+        width: 205px;
+        margin-top: $section-seperation;
     }     
         &:hover{           
             &::after {

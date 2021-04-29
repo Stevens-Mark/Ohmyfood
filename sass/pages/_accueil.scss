@@ -1,20 +1,25 @@
-#main{
+.main{
     flex-direction: column;
 }
 
 /*SELECT SECTION: choose a resto, menu then taste*/
 .select{
     flex-direction: column;
-    margin-top: $section-seperation;
     margin-bottom: $section-seperation;
 }
 
 /*RESTAURANTS SECTION*/
+.restaurants{
+    background-color: $section-background;
+    h2{
+        padding-top: $section-seperation/2;
+    }
+}
+
 .restaurant-container{
     flex-direction: column;
     gap: $layout-gutter;
-    background-color: $section-background;
-    padding-top: $section-seperation;
+    padding-top: $section-seperation/2;
     padding-bottom: $section-seperation*1.5;
 }
 

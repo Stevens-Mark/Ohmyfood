@@ -17,8 +17,11 @@
         }
     }
     &__instructions{    /*declare the style for the header instructions*/
+        flex-direction: column;
+        align-items: center;
         padding: 2.9rem; /*46px*/   
         background: $section-background;
+        margin-bottom: $section-seperation;
         >p{
             color: $quaternary-color;
         }
