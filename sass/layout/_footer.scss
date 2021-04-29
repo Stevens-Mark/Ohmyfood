@@ -11,7 +11,7 @@
         list-style-type: none;  /*remove point*/
         line-height: 1.625rem; /*26px*/
         padding-left: 0rem;
-        img{                /*small Ohmyfood logo's sizing/postioning*/
+        img{                /*smaller logo's sizing/postioning*/
             width: 0.9rem;
             height: 0.9rem;
             margin-right: 0.625rem;
@@ -19,13 +19,12 @@
             top: 5px;
             }
         }
-    a{           /*links change to third colour choice of site*/
+
+    a{  
         color: $secondary-text;
-        &:hover{
-            color:$tertiary-colour;
-            }
-        }
-    address{        /*address balise in footer, reset set font*/
+    }
+        
+    address{        /*address balise in footer, reset font style to normal*/
         font-style: normal;
         }
 }

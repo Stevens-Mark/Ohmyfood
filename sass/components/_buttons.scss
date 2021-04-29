@@ -10,20 +10,20 @@
     @include card-boxshadow; 
     position: relative;
     z-index: 1;  
-    &--commander{           /*menu order btton*/   
+    &--commander{           /*menu order  ("commander") button*/   
         align-self: center;
         width: 40%;
         margin-top: 1.25rem;
     }     
-        &:hover{   
+        &:hover{           
             &::after {
-                opacity: 1;             /*set to 1 so the layer is visible on hover*/
+                opacity: 1;    /*set to opacity to 1 so the layer is visible on hover*/
             }
         }
-        &::after{                       /*create white mask layer that lightens*/
-            content:"";                 /* the button on hover*/
-            position: absolute;
-            top: 0;
+        &::after{             /*every mention of primary button create a duplicate layer*/  
+            content:"";                
+            position: absolute;         /*create white mask layer that lightens*/
+            top: 0;                     /* the button on hover*/
             right: 0;
             bottom: 0;
             left: 0;

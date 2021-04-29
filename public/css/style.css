@@ -79,6 +79,7 @@ span {
 a {
   color: #000;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /*Main colour gradient button used for each page*/
@@ -276,14 +277,10 @@ a {
   top: 5px;
 }
 .footer a {
-  /*links change to third colour choice of site*/
   color: #ffff;
 }
-.footer a:hover {
-  color: #99E2D0;
-}
 .footer address {
-  /*address balise in footer, reset set font*/
+  /*address balise in footer, reset font style to normal*/
   font-style: normal;
 }
 

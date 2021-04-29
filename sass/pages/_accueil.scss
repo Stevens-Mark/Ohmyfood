@@ -75,7 +75,7 @@
         &::after {
             opacity: 1;             /*set to 1 so the layer is visible on hover*/
         }
-    }
+    }                   /*every mention of primary button create a duplicate layer*/ 
     &::after{                       /*create boxshadow that appears over button*/
         content:"";                 /*when the opacity of the layer is changed*/
         position: absolute;         /*avoids a repaint of page (no reloading) so*/

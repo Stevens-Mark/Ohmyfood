@@ -42,7 +42,7 @@
         font-size: 1rem;
         padding-left: 1.25rem;
         margin-top: 1.25rem;
-        &::after{           /*palce line under food headings*/
+        &::after{           /*place line under food headings*/
             content:"";
             display:block; /* so the element starts on anew line*/
             border-bottom: 4px solid $tertiary-colour;
@@ -76,7 +76,7 @@
         /*loop dynamically generates the card's selector name/number & time delay*/
             @for $i from 1 through $number-of-cards {
             &--#{$i} {
-                animation-delay: $time-delay * $i;  /*card time delay based on it's position, ie fractionn of the total time x1, x2, x3...*/
+                animation-delay: $time-delay * $i;  /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
             }
         }
         &:hover .food__tickbox{         /*slide check tick icon into view from right on hover*/
@@ -127,7 +127,7 @@
                     transform: rotate(-360deg);     /*animation transform start positions*/
                     transition: transform $transition-timing ease-in-out;
                 }          
-            }
+            }            
 }
 
 
