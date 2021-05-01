@@ -65,7 +65,7 @@
         }
     &__icon{                  /* button icons size/position*/
         @include icon-style;
-        margin-right: 1.25rem;
+        margin-right: $icon-margin-right;
         }           
     &--colourmodify{                            /*icon & button color modification for dégustez button*/
         background: pastel($primary-colour);    /* alter button background color based on main colour*/
@@ -92,7 +92,7 @@
             @include card-hovershadow;
         }
     @media (min-width: 600px){
-            width: 75%;
+        width: 75%;
         }                
 }
 

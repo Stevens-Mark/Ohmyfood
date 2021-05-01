@@ -2,18 +2,6 @@
 /*returns the pastel colour of a given colour*/
 /*mixins for the button/card shadow effects*/
 /* icon sizing*/
-/*calculates the delay between each card based on the number of cards & the total time of animation*/
-/*animation to fade in menu items on retaurant menu pages*/
-@keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(10%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /* HEADER */
 /* Main elements of the page */
 html,
@@ -61,7 +49,7 @@ h1 {
 }
 
 h2 {
-  /*H2 positoninh*/
+  /*H2 positoning*/
   padding-left: 1.25rem;
   margin: 0rem;
 }
@@ -82,6 +70,18 @@ a {
   cursor: pointer;
 }
 
+/*calculates the delay between each card based on the number of cards & the total time of animation*/
+/*animation to fade in menu items on retaurant menu pages*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*Main colour gradient button used for each page*/
 .primary-button {
   cursor: pointer;
@@ -277,13 +277,23 @@ a {
 
 /*FOOTER used on all pages*/
 .footer {
+  display: flex;
+  flex-direction: column;
   background: #353535;
   padding: 1.25rem;
 }
-.footer img {
+.footer > img {
   /*footer Main Ohmyfood logo size*/
   width: 5.625rem;
   /*90px*/
+}
+@media (min-width: 600px) {
+  .footer > img {
+    width: 8.125rem;
+    /*130px*/
+    margin-bottom: 1.25rem;
+    align-self: center;
+  }
 }
 .footer ul {
   flex-direction: column;
@@ -361,6 +371,7 @@ a {
   flex: 1 1 255px;
   /*short hand for flex grow, flex shrink, flex-basis*/
   min-width: 190px;
+  /*after testing:190px & 255px help with the responsive design to avoid design break*/
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -543,13 +554,43 @@ a {
   animation-delay: 0.3333333333s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
+@media (min-width: 1024px) {
+  .food__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+.food__item--4 {
+  /*exception: La note entrée menu has 4 not 3 options so added seperately*/
+  animation-delay: 1.3333333333s;
+}
 .food__item--2 {
   animation-delay: 0.6666666667s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
+@media (min-width: 1024px) {
+  .food__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+.food__item--4 {
+  /*exception: La note entrée menu has 4 not 3 options so added seperately*/
+  animation-delay: 1.3333333333s;
+}
 .food__item--3 {
   animation-delay: 1s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+}
+@media (min-width: 1024px) {
+  .food__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+.food__item--4 {
+  /*exception: La note entrée menu has 4 not 3 options so added seperately*/
+  animation-delay: 1.3333333333s;
 }
 .food__item:hover .food__tickbox {
   /*slide check tick icon into view from right on hover*/

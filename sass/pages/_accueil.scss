@@ -37,8 +37,8 @@
 
 /* RESTAURANT CARDS*/
 .restaurant-card{
-    flex: 1 1 255px; /*short hand for flex grow, flex shrink, flex-basis*/
-    min-width: 190px;
+    flex: 1 1 255px;    /*short hand for flex grow, flex shrink, flex-basis*/
+    min-width: 190px;   /*after testing:190px & 255px help with the responsive design to avoid design break*/
     display: flex;
     flex-direction: column;
     border-radius: 1rem; 
@@ -77,12 +77,12 @@
     }
     &__heart{      /*heart image outline size & position*/
         @include icon-style;
-        margin-right: 1.25rem; 
+        margin-right: $icon-margin-right;
     }
     &__heartgraded{      /*gradient heart image size & position*/
         position: absolute;
         @include icon-style;
-        margin-right: 1.25rem;
+        margin-right: $icon-margin-right;
         opacity: 0;
         &:hover {       /*heart "fills" up on hover*/
             opacity: 1;

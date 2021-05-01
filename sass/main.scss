@@ -1,21 +1,23 @@
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
-@import "./utils/extensions";
-@import "./utils/animations";
+
 
 @import "./base/base";
 @import "./base/typography";
 
+@import "./utils/animations";
+@import "./components/loader";
 
 @import "./components/buttons";
+
 @import "./layout/header";
 @import "./layout/footer";
 
 @import "./pages/accueil";
-@import "./pages/menu1";
+@import "./pages/menus";
 
 
 
-@import "./layout/container";
+
 

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Ohmyfood! À la française</title>
+    <meta name="author" content="Mark Stevens">
+    <meta name="description" content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux
+	utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
+	restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte.
+	">
+    <!--used to mobile-optimize the site: set webpage to size of device: scale 1 means no need to zoom in-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="public/images/logo/ohmyfood.png">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+</head>    
+<body>
+				<!--START of HEADER --> 
+	<header class="header d-flex">
+		<div class="header__menu-banner d-flex">
+			<a onclick="history.back()"><img class="header__menu-banner__backarrow" src="public/images/icons/arrowleft.svg" alt="Back to Home page"></a>
+			
+			<img  class="header__logo header__logo--adjust" src="public/images/logo/ohmyfood@2x.svg" alt="Ohmyfood! logo">
+		</div>
+
+		<img class="header__menu-banner__image" src="public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
+
+	</header>	<!--END of HEADER --> 
+    
+	<main class="main">	<!--START of Menu section--> 
+
+		<section class="menu">
+			<div class="menu__header d-flex">
+				<h1>À la française</h1>		<!--Heart that changes colour-->
+				<span>	<!--heart ouline & graded heart images-->
+					<img class="menu__heartgraded" src="public/images/icons/graded_heart.svg" alt="">	
+					<img class="menu__heart" src="public/images/icons/heart.svg" alt="">
+				</span>	
+			</div>
+											<!--start of Menu-->
+			<h2>Entrées</h2>	<!-- Entrées: Start of Entrées Menu items-->
+			<div class="food">
+					<!--Choice 1-->
+				<div class="food__item food__item--1">
+					<h3>Tartare de poulpe acidulé</h3>
+					<div class="food__description">	
+						<span class="food__description--truncate">Aux zestes d'orange</span>
+						<span class="food__price"><strong>25€</strong></span>
+					</div>
+					<div class="food__tickbox">		<!--Green check box that slides in from right-->
+						<span class="food__tickbox__logo">	<!--rotating white tick-->
+							<svg viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
+						</span>
+					</div>
+				</div>
+					<!--Choice 2-->
+				<div class="food__item food__item--2">
+					<h3>Velouté de légumes d'antan</h3>
+					<div class="food__description">
+						<span class="food__description--truncate">Carotte, panais, topinambour</span>
+						<span class="food__price"><strong>35€</strong></span>
+					</div>
+					<div class="food__tickbox">		<!--Green check box that slides in from right-->
+						<span class="food__tickbox__logo">	<!--rotating white tick-->
+							<svg viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
+						</span>
+					</div>
+				</div>
+					<!--Choice 3-->
+				<div class="food__item food__item--3">
+					<h3>Soupe à l'oignon</h3>
+					<div class="food__description">
+						<span class="food__description--truncate">Revisitée</span>
+						<span class="food__price"><strong>20€</strong></span>
+					</div>
+					<div class="food__tickbox">		<!--Green check box that slides in from right-->
+						<span class="food__tickbox__logo">	<!--rotating white tick-->
+							<svg viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<h2>Plats</h2>		<!-- Plats: Start of Main Menu items-->	
+			<div class="food">
+					<!--Choice 1-->
+				<div class="food__item food__item--1">
+					<h3>Coquilles Saint-Jacques</h3>	
+					<div class="food__description">
+						<span class="food__description--truncate">Accompagnées d'une purée de panais</span>
+						<span class="food__price"><strong>40€</strong></span>
+					</div>
+					<div class="food__tickbox">		<!--Green check box that slides in from right-->
+						<span class="food__tickbox__logo">	<!--rotating white tick-->
+							<svg viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
+						</span>
+					</div>
+				</div>
+					<!--Choice 2-->
+				<div class="food__item food__item--2">
+					<h3>Magret de canard</h3>
+					<div class="food__description">
+						<span class="food__description--truncate">Et parmentier de pommes de terre</span>
+						<span class="food__price"><strong>35€</strong></span>
+					</div>
+					<div class="food__tickbox">		<!--Green check box that slides in from right-->
+						<span class="food__tickbox__logo">	<!--rotating white tick-->
+							<svg viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
+						</span>
+					</div>
+				</div>
+					<!--Choice 3-->
+				<div class="food__item food__item--3">
+					<h3>Pigeonneau d’Ille-et-Vilaine</h3>
+					<div class="food__description">
+						<span class="food__description--truncate">Sur son lit de gnocchis aux légumes</span>
+						<span class="food__price"><strong>44€</strong></span>
+					</div>
+					<div class="food__tickbox">		<!--Green check box that slides in from right-->
+						<span class="food__tickbox__logo">	<!--rotating white tick-->
+							<svg viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<h2>Desserts</h2>	<!-- Desserts: Start of Desserts Menu items-->
+			<div class="food">
+					<!--Choice 1-->
+				<div class="food__item food__item--1">
+					<h3>Pétales de violettes glacés</h3>
+					<div class="food__description">
+						<span class="food__description--truncate">Et purée de noisettes</span>
+						<span class="food__price"><strong>18€</strong></span>
+					</div>
+					<div class="food__tickbox">		<!--Green check box that slides in from right-->
+						<span class="food__tickbox__logo">	<!--rotating white tick-->
+							<svg viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
+						</span>
+					</div>
+				</div>
+					<!--Choice 2-->
+				<div class="food__item food__item--2">
+					<h3>Fondant au chocolat</h3>
+					<div class="food__description">
+						<span class="food__description--truncate">Revisité</span>
+						<span class="food__price"><strong>22€</strong></span>
+					</div>
+					<div class="food__tickbox">		<!--Green check box that slides in from right-->
+						<span class="food__tickbox__logo">	<!--rotating white tick-->
+							<svg viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
+						</span>
+					</div>
+				</div>
+					<!--Choice 3-->
+				<div class="food__item food__item--3">
+					<h3>Millefeuille croustillant</h3>
+					<div class="food__description">
+						<span class="food__description--truncate">Myrtilles et pâte d'amande</span>
+						<span class="food__price"><strong>23€</strong></span>
+					</div>
+					<div class="food__tickbox">		<!--Green check box that slides in from right-->
+						<span class="food__tickbox__logo">	<!--rotating white tick-->
+							<svg viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
+						</span>
+					</div>
+				</div>
+			</div> <!--end of Menu-->
+			<div class="primary-button primary-button--commander">Commander</div>
+		</section> <!--end of Menu section--> 
+	</main>		
+
+	<footer class="footer">	<!--START of FOOTER --> 
+		<img src="public/images/logo/ohmyfood@2xwhite.svg" alt="ohmyfood-small-logo" title="Ohmyfood small Logo">	
+		<ul class="d-flex">
+			<li><img src="public/images/icons/white-fork.svg" alt=""><a href="#">Proposer un restaurant</a></li>
+			<li><img src="public/images/icons/white-handshake.svg" alt=""><a href="#">Devenir partenaire</a></li>
+			<li><a href="#">Mentions légales</a></li>
+			<li><address><a href="mailto:contact@ohmyfood.com">Contact</a></address></li>
+		</ul>
+	</footer>
+</body>
+</html>
