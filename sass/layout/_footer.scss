@@ -4,14 +4,6 @@
     flex-direction: column;
     background: $footerbackground;
     padding: $layout-gutter;
-    >img{                  /*footer Main Ohmyfood logo size*/
-        width: 5.625rem; /*90px*/
-        @media (min-width: 600px){
-            width: 8.125rem; /*130px*/
-            margin-bottom: $layout-gutter;
-            align-self: center;
-            }
-        }   
     ul{
         flex-direction: column;
         justify-content: space-between;
@@ -28,8 +20,18 @@
             }
         }
 
-    a{  
+    a{  /*footer Ohmyfood logo size*/
         color: $secondary-text;
+        >img{
+            width: 100px;
+        }
+        @media (min-width: 600px){
+            margin-bottom: $layout-gutter;
+            align-self: center;
+            >img{
+                width: 160px;
+            }
+        }
     }
         
     address{        /*address balise in footer, reset font style to normal*/
