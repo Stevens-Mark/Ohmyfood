@@ -7,29 +7,30 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: $section-seperation;
-    @media (min-width: 925px){
+    @media (min-width: $laptop-onwards){
         flex-direction: row;
     }   
 }
 
 /*RESTAURANTS SECTION*/
+/*Restaurant section heading*/
 .restaurants{
     background-color: $section-background;
     h2{
         padding-top: $section-seperation/2;
     }
 }
-
+/*Holds all restaurant cards*/
 .restaurant-container{
     flex-direction: column;
     gap: $layout-gutter;
     padding-top: $section-seperation/2;
     padding-bottom: $section-seperation*1.5;
-    @media (min-width: 600px){
+    @media (min-width: $tablette-onwards){
         gap: 1.25rem;
         flex-flow: row wrap;
     }
-    @media (min-width: 925px) {
+    @media (min-width: $laptop-onwards) {
         gap: 0rem;
         flex-wrap: nowrap;
         }
@@ -38,7 +39,7 @@
 /* RESTAURANT CARDS*/
 .restaurant-card{
     flex: 1 1 255px;    /*short hand for flex grow, flex shrink, flex-basis*/
-    min-width: 190px;   /*after testing:190px & 255px help with the responsive design to avoid design break*/
+    min-width: 190px;   /*after testing:190px & 255px help with the responsive design to avoid design breaks*/
     display: flex;
     flex-direction: column;
     border-radius: 1rem; 
@@ -75,11 +76,11 @@
             margin-top: -0.625rem;
         }
     }
-    &__heart{      /*heart image outline size & position*/
+    &__heart{      /*heart image outline: size & position*/
         @include icon-style;
         margin-right: $icon-margin-right;
     }
-    &__heartgraded{      /*gradient heart image size & position*/
+    &__heartgraded{      /*gradient heart: image size & position*/
         position: absolute;
         @include icon-style;
         margin-right: $icon-margin-right;
@@ -93,8 +94,8 @@
         &::after {
             opacity: 1;             /*set to 1 so the layer is visible on hover*/
         }
-    }                   /*every mention of primary button create a duplicate layer*/ 
-    &::after{                       /*create boxshadow that appears over button*/
+    }                   /*every mention of primary button creates a duplicate layer*/ 
+    &::after{                       /*create boxshadow that appears around button*/
         content:"";                 /*when the opacity of the layer is changed*/
         position: absolute;         /*avoids a repaint of page (no reloading) so*/
         top: 0;                     /*more efficient*/

@@ -10,7 +10,7 @@
         list-style-type: none;  /*remove point*/
         line-height: 1.625rem; /*26px*/
         padding-left: 0rem;
-        @media (min-width: 600px){
+        @media (min-width: $tablette-onwards){
             flex-direction: row;         
             }
         img{                /*smaller logo's sizing/positioning*/
@@ -23,13 +23,13 @@
     a{  /*footer Ohmyfood logo size*/
         color: $secondary-text;
         >img{
-            width: 100px;
+            width: 6.25rem;
         }
-        @media (min-width: 600px){
+        @media (min-width: $tablette-onwards){
             margin-bottom: $layout-gutter;
             align-self: center;
             >img{
-                width: 160px;
+                width: 10rem;
             }
         }
     }

@@ -6,18 +6,41 @@ $primary-text:#000;
 $secondary-text: #ffff;
 $card-color:#ffff;
 
+/*Accueil page variables*/
 $banner-background-light: #eaeaea;
 $banner-background-dark:#cfcfcf;
+$element-shadow:#d9d9d9;
 
-$section-background: #f6f6f6;
-$footerbackground:#353535;
-
+/*General variables*/
 $logo-width: 8rem;
 $icon-sizing: 1.25rem;
 $icon-margin-right: 1.25rem;
-$element-shadow:#d9d9d9;
 $section-seperation: 2.875rem;
 $layout-gutter: 1.25rem;
-
+$section-background: #f6f6f6;
 $transition-timing: 500ms;
 
+/*footer variabels*/
+$footerbackground:#353535;
+
+
+$loadpage-duration: 3s;
+$loadpage-delay: 1s;
+$animation-count: 3;
+
+$ball-size: 3.438rem; /*55px*/
+$nos-loading-balls: 9;
+$ball-loading-duration: 800ms;
+$staggered-delay: $ball-loading-duration / $nos-loading-balls;
+
+/*variables used for menu card animation*/
+$number-of-cards: 3;
+$card-animation-time: 1s;
+$time-delay: $card-animation-time / $number-of-cards;
+/*calculates the delay time between each card based on the number of cards & the total time of animation*/
+
+/*Media Queries used*/
+
+$tablette-onwards: 600px;
+$laptop-onwards: 925px;
+$desktop-onwards: 1024px;

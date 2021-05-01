@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/*Accueil page variables*/
+/*General variables*/
+/*footer variabels*/
+/*55px*/
+/*variables used for menu card animation*/
+/*calculates the delay time between each card based on the number of cards & the total time of animation*/
+/*Media Queries used*/
 /*returns the pastel colour of a given colour*/
 /*mixins for the button/card shadow effects*/
 /* icon sizing*/
@@ -49,7 +56,7 @@ h1 {
 }
 
 h2 {
-  /*H2 positoning*/
+  /*Heading H2 positioning*/
   padding-left: 1.25rem;
   margin: 0rem;
 }
@@ -70,8 +77,7 @@ a {
   cursor: pointer;
 }
 
-/*calculates the delay between each card based on the number of cards & the total time of animation*/
-/*animation to fade in menu items on retaurant menu pages*/
+/*animation to fade in menu items on restaurant menu pages*/
 @keyframes fadein {
   from {
     opacity: 0;
@@ -82,6 +88,194 @@ a {
     transform: translateY(0);
   }
 }
+/*fade out loading page icon*/
+/*Z-index: "restacked" loading page so accueil page links accessible after animation*/
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+/*loading balls expand/contract*/
+@keyframes bars {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*Loading Page animationcontainer*/
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  /* left: 0px;
+   top: 0px;*/
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  animation: fadeout 3s 1s linear both;
+}
+
+/*Declaration, defining & styling of loading balls*/
+.load {
+  width: 6.25rem;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Shrikhand";
+}
+.load__ball {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 2px;
+  width: 3.438rem;
+  height: 5.157rem;
+  /*backwards extends keyframe to start the value before the keyframe plays,
+  alterate will play keyframe forwards then backwards & ease-in-out sets the timing*/
+  animation: bars 800ms backwards ease-in-out alternate;
+  animation-iteration-count: 3;
+  /*play animation "x" times*/
+  /*loop dynamically generates each balls selector name/number & time delay*/
+  /*helps create a nice ripple effect with loading image*/
+  /*helps create a nice ripple effect with loading image*/
+  /*helps create a nice ripple effect with loading image*/
+  /*helps create a nice ripple effect with loading image*/
+  /*helps create a nice ripple effect with loading image*/
+  /*helps create a nice ripple effect with loading image*/
+  /*helps create a nice ripple effect with loading image*/
+  /*helps create a nice ripple effect with loading image*/
+  /*helps create a nice ripple effect with loading image*/
+}
+.load__ball:nth-child(even) {
+  background-color: #FF79DA;
+  /*assign color to each "even" ball: ie, 2,4 etc*/
+}
+.load__ball:nth-child(3n+3) {
+  background-color: #99E2D0;
+  /*assign color to every 3rd ball: ie, 3,6,9 etc*/
+}
+.load__ball--1 {
+  animation-delay: 88.8888888889ms;
+}
+.load__ball--1-inv {
+  /*loop also generates the same for the "inverse" smaller balls in loading page*/
+  width: 1.719rem;
+  height: 1.719rem;
+  animation-delay: 88.8888888889ms;
+  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+  animation-direction: alternate-reverse;
+  /*play animation back&forth, but starting opposite end to main animation*/
+}
+.load__ball--2 {
+  animation-delay: 177.7777777778ms;
+}
+.load__ball--2-inv {
+  /*loop also generates the same for the "inverse" smaller balls in loading page*/
+  width: 1.719rem;
+  height: 1.719rem;
+  animation-delay: 177.7777777778ms;
+  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+  animation-direction: alternate-reverse;
+  /*play animation back&forth, but starting opposite end to main animation*/
+}
+.load__ball--3 {
+  animation-delay: 266.6666666667ms;
+}
+.load__ball--3-inv {
+  /*loop also generates the same for the "inverse" smaller balls in loading page*/
+  width: 1.719rem;
+  height: 1.719rem;
+  animation-delay: 266.6666666667ms;
+  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+  animation-direction: alternate-reverse;
+  /*play animation back&forth, but starting opposite end to main animation*/
+}
+.load__ball--4 {
+  animation-delay: 355.5555555556ms;
+}
+.load__ball--4-inv {
+  /*loop also generates the same for the "inverse" smaller balls in loading page*/
+  width: 1.719rem;
+  height: 1.719rem;
+  animation-delay: 355.5555555556ms;
+  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+  animation-direction: alternate-reverse;
+  /*play animation back&forth, but starting opposite end to main animation*/
+}
+.load__ball--5 {
+  animation-delay: 444.4444444444ms;
+}
+.load__ball--5-inv {
+  /*loop also generates the same for the "inverse" smaller balls in loading page*/
+  width: 1.719rem;
+  height: 1.719rem;
+  animation-delay: 444.4444444444ms;
+  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+  animation-direction: alternate-reverse;
+  /*play animation back&forth, but starting opposite end to main animation*/
+}
+.load__ball--6 {
+  animation-delay: 533.3333333333ms;
+}
+.load__ball--6-inv {
+  /*loop also generates the same for the "inverse" smaller balls in loading page*/
+  width: 1.719rem;
+  height: 1.719rem;
+  animation-delay: 533.3333333333ms;
+  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+  animation-direction: alternate-reverse;
+  /*play animation back&forth, but starting opposite end to main animation*/
+}
+.load__ball--7 {
+  animation-delay: 622.2222222222ms;
+}
+.load__ball--7-inv {
+  /*loop also generates the same for the "inverse" smaller balls in loading page*/
+  width: 1.719rem;
+  height: 1.719rem;
+  animation-delay: 622.2222222222ms;
+  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+  animation-direction: alternate-reverse;
+  /*play animation back&forth, but starting opposite end to main animation*/
+}
+.load__ball--8 {
+  animation-delay: 711.1111111111ms;
+}
+.load__ball--8-inv {
+  /*loop also generates the same for the "inverse" smaller balls in loading page*/
+  width: 1.719rem;
+  height: 1.719rem;
+  animation-delay: 711.1111111111ms;
+  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+  animation-direction: alternate-reverse;
+  /*play animation back&forth, but starting opposite end to main animation*/
+}
+.load__ball--9 {
+  animation-delay: 800ms;
+}
+.load__ball--9-inv {
+  /*loop also generates the same for the "inverse" smaller balls in loading page*/
+  width: 1.719rem;
+  height: 1.719rem;
+  animation-delay: 800ms;
+  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+  animation-direction: alternate-reverse;
+  /*play animation back&forth, but starting opposite end to main animation*/
+}
+
 /*Main colour gradient button used for each page*/
 .primary-button {
   cursor: pointer;
@@ -96,17 +290,17 @@ a {
   z-index: 1;
 }
 .primary-button--commander {
-  /*menu order  ("commander") button*/
+  /*menu order ("commander") button*/
   align-self: center;
   width: 205px;
   margin-top: 2.875rem;
 }
 .primary-button:hover::after {
   opacity: 1;
-  /*set to opacity to 1 so the layer is visible on hover*/
+  /*set opacity to 1 so the layer is visible on hover*/
 }
 .primary-button::after {
-  /*every mention of primary button create a duplicate layer*/
+  /*every mention of primary button creates a duplicate layer*/
   content: "";
   position: absolute;
   /*create white mask layer that lightens*/
@@ -178,7 +372,7 @@ a {
 .select-button::after {
   /*::after places this "white mask" layer everywhere the select-button*/
   content: "";
-  /* selector is mentioned in the html*/
+  /* selector is mentioned in the html with new boxshadow value for hover*/
   position: absolute;
   top: 0;
   right: 0;
@@ -251,6 +445,9 @@ a {
 }
 
 /*HEADER components for menu pages*/
+.header {
+  /*so backarrow moves to left side corner*/
+}
 .header__menu-banner {
   align-items: center;
   justify-content: center;
@@ -272,7 +469,7 @@ a {
   margin-right: 1.25rem;
   margin-left: 0rem;
   flex: 1;
-  /*set flex:1 to take up all available space*/
+  /*set flex:1 so logo takes up all available space*/
 }
 
 /*FOOTER used on all pages*/
@@ -307,7 +504,7 @@ a {
   color: #ffff;
 }
 .footer a > img {
-  width: 100px;
+  width: 6.25rem;
 }
 @media (min-width: 600px) {
   .footer a {
@@ -315,7 +512,7 @@ a {
     align-self: center;
   }
   .footer a > img {
-    width: 160px;
+    width: 10rem;
   }
 }
 .footer address {
@@ -340,6 +537,7 @@ a {
 }
 
 /*RESTAURANTS SECTION*/
+/*Restaurant section heading*/
 .restaurants {
   background-color: #f6f6f6;
 }
@@ -347,6 +545,7 @@ a {
   padding-top: 1.4375rem;
 }
 
+/*Holds all restaurant cards*/
 .restaurant-container {
   flex-direction: column;
   gap: 1.25rem;
@@ -371,7 +570,7 @@ a {
   flex: 1 1 255px;
   /*short hand for flex grow, flex shrink, flex-basis*/
   min-width: 190px;
-  /*after testing:190px & 255px help with the responsive design to avoid design break*/
+  /*after testing:190px & 255px help with the responsive design to avoid design breaks*/
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -381,7 +580,7 @@ a {
   box-shadow: 0px 4px 12px 0px #d9d9d9;
   position: relative;
   z-index: 1;
-  /*every mention of primary button create a duplicate layer*/
+  /*every mention of primary button creates a duplicate layer*/
 }
 .restaurant-card__photo {
   /*restaurant image styling*/
@@ -413,13 +612,13 @@ a {
   margin-top: -0.625rem;
 }
 .restaurant-card__heart {
-  /*heart image outline size & position*/
+  /*heart image outline: size & position*/
   width: 1.25rem;
   height: 1.25rem;
   margin-right: 1.25rem;
 }
 .restaurant-card__heartgraded {
-  /*gradient heart image size & position*/
+  /*gradient heart: image size & position*/
   position: absolute;
   width: 1.25rem;
   height: 1.25rem;
@@ -436,7 +635,7 @@ a {
   /*set to 1 so the layer is visible on hover*/
 }
 .restaurant-card::after {
-  /*create boxshadow that appears over button*/
+  /*create boxshadow that appears around button*/
   content: "";
   /*when the opacity of the layer is changed*/
   position: absolute;
@@ -504,7 +703,7 @@ a {
   /*place line under food headings*/
   content: "";
   display: block;
-  /* so the element starts on anew line*/
+  /* so the element starts on a new line*/
   border-bottom: 4px solid #99E2D0;
   width: 2.5rem;
   position: relative;
@@ -547,7 +746,7 @@ a {
   opacity: 0;
   /*start with cards invisible*/
   animation: fadein 1s forwards ease-in-out;
-  /*loop dynamically generates the card's selector name/number & time delay*/
+  /*loop dynamically generates each card's selector name/number & time delay*/
   /*decrease the size of the description container by the same amount the tick icon moves to the left to give the illusion that it pushes the price to the left*/
 }
 .food__item--1 {

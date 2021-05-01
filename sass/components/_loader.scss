@@ -1,0 +1,55 @@
+/*Loading Page animationcontainer*/
+.loader-container{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+   /* left: 0px;
+    top: 0px;*/
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    animation: fadeout $loadpage-duration $loadpage-delay linear both;
+}
+
+/*Declaration, defining & styling of loading balls*/
+.load {
+    width: 6.25rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Shrikhand';
+    &__ball {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-colour;
+        border-radius: 50%;
+        padding: 2px;
+        width: $ball-size; 
+        height: $ball-size*1.5; 
+        /*backwards extends keyframe to start the value before the keyframe plays,
+        alterate will play keyframe forwards then backwards & ease-in-out sets the timing*/
+        animation: bars $ball-loading-duration backwards ease-in-out alternate;
+        animation-iteration-count: $animation-count;  /*play animation "x" times*/
+        &:nth-child(even) {
+            background-color: $secondary-colour; /*assign color to each "even" ball: ie, 2,4 etc*/
+        }
+        &:nth-child(3n+3) {
+            background-color:$tertiary-colour; /*assign color to every 3rd ball: ie, 3,6,9 etc*/
+        }
+        /*loop dynamically generates each balls selector name/number & time delay*/
+        @for $i from 1 through $nos-loading-balls {
+            &--#{$i} {
+                animation-delay: $staggered-delay * $i;
+            }
+            &--#{$i}-inv {          /*loop also generates the same for the "inverse" smaller balls in loading page*/
+                width: $ball-size/2;
+                height: $ball-size/2;
+                animation-delay: $staggered-delay * $i; /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+                animation-direction: alternate-reverse; /*play animation back&forth, but starting opposite end to main animation*/
+            }                                               /*helps create a nice ripple effect with loading image*/ 
+        }                                               
+    }
+}

@@ -2,11 +2,10 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 
-
 @import "./base/base";
 @import "./base/typography";
 
-@import "./utils/animations";
+@import "./utils/keyframes";
 @import "./components/loader";
 
 @import "./components/buttons";

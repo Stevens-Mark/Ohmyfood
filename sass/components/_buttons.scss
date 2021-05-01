@@ -10,17 +10,17 @@
     @include card-boxshadow; 
     position: relative;
     z-index: 1;  
-    &--commander{           /*menu order  ("commander") button*/   
+    &--commander{           /*menu order ("commander") button*/   
         align-self: center;
         width: 205px;
         margin-top: $section-seperation;
     }     
         &:hover{           
             &::after {
-                opacity: 1;    /*set to opacity to 1 so the layer is visible on hover*/
+                opacity: 1;    /*set opacity to 1 so the layer is visible on hover*/
             }
         }
-        &::after{             /*every mention of primary button create a duplicate layer*/  
+        &::after{             /*every mention of primary button creates a duplicate layer*/  
             content:"";                
             position: absolute;         /*create white mask layer that lightens*/
             top: 0;                     /* the button on hover*/
@@ -78,7 +78,7 @@
             }
         }
         &::after{               /*::after places this "white mask" layer everywhere the select-button*/
-            content:"";         /* selector is mentioned in the html*/
+            content:"";         /* selector is mentioned in the html with new boxshadow value for hover*/
             position: absolute;
             top: 0;
             right: 0;
@@ -91,9 +91,9 @@
             transition: opacity $transition-timing;    /*text but infront of original button background*/
             @include card-hovershadow;
         }
-    @media (min-width: 600px){
-        width: 75%;
-        }                
+    @media (min-width: $tablette-onwards){
+            width: 75%;
+            }                
 }
 
 
