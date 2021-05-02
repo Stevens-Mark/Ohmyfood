@@ -20,12 +20,12 @@ $layout-gutter: 1.25rem;
 $section-background: #f6f6f6;
 $transition-timing: 500ms;
 
-/*footer variabels*/
+/*footer variables*/
 $footerbackground:#353535;
 
 /*variables used for loading page*/
 $loadpage-duration: 3s;
-$loadpage-delay: 1s;
+$loadpage-delay: 500ms;
 
 $animation-repetition: 3;
 $num-of-balls: 9;
@@ -33,13 +33,12 @@ $ball-anim-duration: 800ms;
 $staggered-delay: $ball-anim-duration / $num-of-balls;
 
 /*variables used for menu card animation*/
-$number-of-cards: 3;
+$number-of-cards: 4;
 $card-animation-time: 1s;
 $time-delay: $card-animation-time / $number-of-cards;
 /*calculates the delay time between each card based on the number of cards & the total time of animation*/
 
 /*Media Queries used*/
-
 $tablette-onwards: 600px;
 $laptop-onwards: 925px;
 $desktop-onwards: 1024px;

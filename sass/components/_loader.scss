@@ -1,6 +1,5 @@
 /*Loading Page animation container*/
-.loader-container{
-    display: flex;
+.loader{
     flex-direction: column;
     background: white;
     font-family: "Shrikhand";
@@ -13,37 +12,34 @@
     height: 100%;
     z-index: 9999;
     animation: fadeout $loadpage-duration $loadpage-delay linear both;
-}
-
-/*Declaration, defining & styling of loading balls*/
-.load {
-    height: 40px;
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 2rem;
-    &__balls {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5px;
-        margin: 1px;
-        background-color: $primary-colour;
-        border-radius: 50%;
-        width: 25px;
-        /*backwards extends keyframe to start the value before the keyframe plays,
-        alterate will play keyframe forwards then backwards & ease sets the timing*/
-        animation: balls $ball-anim-duration backwards ease-in-out alternate infinite;
-        animation-iteration-count: $animation-repetition;    /*play animation "x" times*/
-        &:nth-child(even) {
-            background-color: $secondary-colour; /*assign color to each "even" ball: ie, 2,4 etc*/
-        }
-        &:nth-child(3n+3) {
-            background-color:$tertiary-colour; /*assign color to every 3rd ball: ie, 3,6,9 etc*/
-        }
-        /*loop dynamically generates each balls selector name/number & time delay*/
-        @for $i from 1 through $num-of-balls {
-            &--#{$i} {
-                animation-delay: $staggered-delay * $i;
+    &__container {  /*Declaration, defining & styling of loading balls*/
+        height: 40px;
+        justify-content: space-evenly;
+        margin-bottom: 2rem;
+        &__balls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            margin: 1px;
+            background-color: $primary-colour;
+            border-radius: 50%;
+            width: 25px;
+            /*backwards extends keyframe to start the value before the keyframe plays,
+            alterate will play keyframe forwards then backwards & ease sets the timing*/
+            animation: balls $ball-anim-duration backwards ease-in-out alternate;
+            animation-iteration-count: $animation-repetition;    /*play animation "x" times*/
+            &:nth-child(even) {
+                background-color: $secondary-colour; /*assign color to each "even" ball: ie, 2,4 etc*/
+            }
+            &:nth-child(3n+3) {
+                background-color:$tertiary-colour; /*assign color to every 3rd ball: ie, 3,6,9 etc*/
+            }
+            /*loop dynamically generates each balls selector name/number & time delay*/
+            @for $i from 1 through $num-of-balls {
+                &--#{$i} {
+                    animation-delay: $staggered-delay * $i;
+                }
             }
         }
     }

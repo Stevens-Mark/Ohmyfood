@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*Accueil page variables*/
 /*General variables*/
-/*footer variabels*/
+/*footer variables*/
 /*variables used for loading page*/
 /*variables used for menu card animation*/
 /*calculates the delay time between each card based on the number of cards & the total time of animation*/
@@ -114,8 +114,7 @@ a {
   }
 }
 /*Loading Page animation container*/
-.loader-container {
-  display: flex;
+.loader {
   flex-direction: column;
   background: white;
   font-family: "Shrikhand";
@@ -127,17 +126,15 @@ a {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  animation: fadeout 3s 1s linear both;
+  animation: fadeout 3s 500ms linear both;
 }
-
-/*Declaration, defining & styling of loading balls*/
-.load {
+.loader__container {
+  /*Declaration, defining & styling of loading balls*/
   height: 40px;
-  display: flex;
   justify-content: space-evenly;
   margin-bottom: 2rem;
 }
-.load__balls {
+.loader__container__balls {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,44 +145,44 @@ a {
   width: 25px;
   /*backwards extends keyframe to start the value before the keyframe plays,
   alterate will play keyframe forwards then backwards & ease sets the timing*/
-  animation: balls 800ms backwards ease-in-out alternate infinite;
+  animation: balls 800ms backwards ease-in-out alternate;
   animation-iteration-count: 3;
   /*play animation "x" times*/
   /*loop dynamically generates each balls selector name/number & time delay*/
 }
-.load__balls:nth-child(even) {
+.loader__container__balls:nth-child(even) {
   background-color: #FF79DA;
   /*assign color to each "even" ball: ie, 2,4 etc*/
 }
-.load__balls:nth-child(3n+3) {
+.loader__container__balls:nth-child(3n+3) {
   background-color: #99E2D0;
   /*assign color to every 3rd ball: ie, 3,6,9 etc*/
 }
-.load__balls--1 {
+.loader__container__balls--1 {
   animation-delay: 88.8888888889ms;
 }
-.load__balls--2 {
+.loader__container__balls--2 {
   animation-delay: 177.7777777778ms;
 }
-.load__balls--3 {
+.loader__container__balls--3 {
   animation-delay: 266.6666666667ms;
 }
-.load__balls--4 {
+.loader__container__balls--4 {
   animation-delay: 355.5555555556ms;
 }
-.load__balls--5 {
+.loader__container__balls--5 {
   animation-delay: 444.4444444444ms;
 }
-.load__balls--6 {
+.loader__container__balls--6 {
   animation-delay: 533.3333333333ms;
 }
-.load__balls--7 {
+.loader__container__balls--7 {
   animation-delay: 622.2222222222ms;
 }
-.load__balls--8 {
+.loader__container__balls--8 {
   animation-delay: 711.1111111111ms;
 }
-.load__balls--9 {
+.loader__container__balls--9 {
   animation-delay: 800ms;
 }
 
@@ -314,6 +311,8 @@ a {
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  /*HEADER components for menu pages*/
+  /*so backarrow moves to left side corner*/
 }
 .header__logo {
   height: 1.563rem;
@@ -355,11 +354,6 @@ a {
 }
 .header__instructions > p {
   color: #7e7e7e;
-}
-
-/*HEADER components for menu pages*/
-.header {
-  /*so backarrow moves to left side corner*/
 }
 .header__menu-banner {
   align-items: center;
@@ -663,7 +657,7 @@ a {
   /*decrease the size of the description container by the same amount the tick icon moves to the left to give the illusion that it pushes the price to the left*/
 }
 .food__item--1 {
-  animation-delay: 0.3333333333s;
+  animation-delay: 0.25s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
 @media (min-width: 1024px) {
@@ -671,13 +665,19 @@ a {
     margin-left: 5px;
     margin-right: 5px;
   }
-}
-.food__item--4 {
-  /*exception: La note entrée menu has 4 not 3 options so added seperately*/
-  animation-delay: 1.3333333333s;
 }
 .food__item--2 {
-  animation-delay: 0.6666666667s;
+  animation-delay: 0.5s;
+  /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+}
+@media (min-width: 1024px) {
+  .food__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+.food__item--3 {
+  animation-delay: 0.75s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
 @media (min-width: 1024px) {
@@ -687,10 +687,6 @@ a {
   }
 }
 .food__item--4 {
-  /*exception: La note entrée menu has 4 not 3 options so added seperately*/
-  animation-delay: 1.3333333333s;
-}
-.food__item--3 {
   animation-delay: 1s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
@@ -699,10 +695,6 @@ a {
     margin-left: 5px;
     margin-right: 5px;
   }
-}
-.food__item--4 {
-  /*exception: La note entrée menu has 4 not 3 options so added seperately*/
-  animation-delay: 1.3333333333s;
 }
 .food__item:hover .food__tickbox {
   /*slide check tick icon into view from right on hover*/
