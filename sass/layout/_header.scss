@@ -42,6 +42,7 @@
             margin-left: 1.25rem;
         }
         &__image{       /*menu header image*/
+            animation: fade $card-animation-time*2 ease-in-out both;
             height: 14.375rem;
             width: 100%;
             object-fit: cover;

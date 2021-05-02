@@ -1,3 +1,9 @@
+/*fade in for restaurant menu header photo*/
+@keyframes fade {
+    from { opacity: 0;}
+    to   { opacity: 1;}
+}
+
 /*animation to fade in menu items on restaurant menu pages*/
 @keyframes fadein {
     from { opacity: 0; transform: translateY(10%);}
