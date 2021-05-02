@@ -2,7 +2,7 @@
 /*Accueil page variables*/
 /*General variables*/
 /*footer variabels*/
-/*55px*/
+/*variables used for loading page*/
 /*variables used for menu card animation*/
 /*calculates the delay time between each card based on the number of cards & the total time of animation*/
 /*Media Queries used*/
@@ -103,19 +103,22 @@ a {
   }
 }
 /*loading balls expand/contract*/
-@keyframes bars {
+@keyframes balls {
   0% {
-    transform: scale(0.3);
+    transform: scale(0.2);
+    opacity: 0;
   }
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
-/*Loading Page animationcontainer*/
+/*Loading Page animation container*/
 .loader-container {
   display: flex;
   flex-direction: column;
   background: white;
+  font-family: "Shrikhand";
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -129,151 +132,61 @@ a {
 
 /*Declaration, defining & styling of loading balls*/
 .load {
-  width: 6.25rem;
+  height: 40px;
   display: flex;
   justify-content: space-evenly;
-  font-family: "Shrikhand";
+  margin-bottom: 2rem;
 }
-.load__ball {
+.load__balls {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5px;
+  margin: 1px;
   background-color: #9356DC;
   border-radius: 50%;
-  padding: 2px;
-  width: 3.438rem;
-  height: 5.157rem;
+  width: 25px;
   /*backwards extends keyframe to start the value before the keyframe plays,
-  alterate will play keyframe forwards then backwards & ease-in-out sets the timing*/
-  animation: bars 800ms backwards ease-in-out alternate;
+  alterate will play keyframe forwards then backwards & ease sets the timing*/
+  animation: balls 800ms backwards ease-in-out alternate infinite;
   animation-iteration-count: 3;
   /*play animation "x" times*/
   /*loop dynamically generates each balls selector name/number & time delay*/
-  /*helps create a nice ripple effect with loading image*/
-  /*helps create a nice ripple effect with loading image*/
-  /*helps create a nice ripple effect with loading image*/
-  /*helps create a nice ripple effect with loading image*/
-  /*helps create a nice ripple effect with loading image*/
-  /*helps create a nice ripple effect with loading image*/
-  /*helps create a nice ripple effect with loading image*/
-  /*helps create a nice ripple effect with loading image*/
-  /*helps create a nice ripple effect with loading image*/
 }
-.load__ball:nth-child(even) {
+.load__balls:nth-child(even) {
   background-color: #FF79DA;
   /*assign color to each "even" ball: ie, 2,4 etc*/
 }
-.load__ball:nth-child(3n+3) {
+.load__balls:nth-child(3n+3) {
   background-color: #99E2D0;
   /*assign color to every 3rd ball: ie, 3,6,9 etc*/
 }
-.load__ball--1 {
+.load__balls--1 {
   animation-delay: 88.8888888889ms;
 }
-.load__ball--1-inv {
-  /*loop also generates the same for the "inverse" smaller balls in loading page*/
-  width: 1.719rem;
-  height: 1.719rem;
-  animation-delay: 88.8888888889ms;
-  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
-  animation-direction: alternate-reverse;
-  /*play animation back&forth, but starting opposite end to main animation*/
-}
-.load__ball--2 {
+.load__balls--2 {
   animation-delay: 177.7777777778ms;
 }
-.load__ball--2-inv {
-  /*loop also generates the same for the "inverse" smaller balls in loading page*/
-  width: 1.719rem;
-  height: 1.719rem;
-  animation-delay: 177.7777777778ms;
-  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
-  animation-direction: alternate-reverse;
-  /*play animation back&forth, but starting opposite end to main animation*/
-}
-.load__ball--3 {
+.load__balls--3 {
   animation-delay: 266.6666666667ms;
 }
-.load__ball--3-inv {
-  /*loop also generates the same for the "inverse" smaller balls in loading page*/
-  width: 1.719rem;
-  height: 1.719rem;
-  animation-delay: 266.6666666667ms;
-  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
-  animation-direction: alternate-reverse;
-  /*play animation back&forth, but starting opposite end to main animation*/
-}
-.load__ball--4 {
+.load__balls--4 {
   animation-delay: 355.5555555556ms;
 }
-.load__ball--4-inv {
-  /*loop also generates the same for the "inverse" smaller balls in loading page*/
-  width: 1.719rem;
-  height: 1.719rem;
-  animation-delay: 355.5555555556ms;
-  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
-  animation-direction: alternate-reverse;
-  /*play animation back&forth, but starting opposite end to main animation*/
-}
-.load__ball--5 {
+.load__balls--5 {
   animation-delay: 444.4444444444ms;
 }
-.load__ball--5-inv {
-  /*loop also generates the same for the "inverse" smaller balls in loading page*/
-  width: 1.719rem;
-  height: 1.719rem;
-  animation-delay: 444.4444444444ms;
-  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
-  animation-direction: alternate-reverse;
-  /*play animation back&forth, but starting opposite end to main animation*/
-}
-.load__ball--6 {
+.load__balls--6 {
   animation-delay: 533.3333333333ms;
 }
-.load__ball--6-inv {
-  /*loop also generates the same for the "inverse" smaller balls in loading page*/
-  width: 1.719rem;
-  height: 1.719rem;
-  animation-delay: 533.3333333333ms;
-  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
-  animation-direction: alternate-reverse;
-  /*play animation back&forth, but starting opposite end to main animation*/
-}
-.load__ball--7 {
+.load__balls--7 {
   animation-delay: 622.2222222222ms;
 }
-.load__ball--7-inv {
-  /*loop also generates the same for the "inverse" smaller balls in loading page*/
-  width: 1.719rem;
-  height: 1.719rem;
-  animation-delay: 622.2222222222ms;
-  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
-  animation-direction: alternate-reverse;
-  /*play animation back&forth, but starting opposite end to main animation*/
-}
-.load__ball--8 {
+.load__balls--8 {
   animation-delay: 711.1111111111ms;
 }
-.load__ball--8-inv {
-  /*loop also generates the same for the "inverse" smaller balls in loading page*/
-  width: 1.719rem;
-  height: 1.719rem;
-  animation-delay: 711.1111111111ms;
-  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
-  animation-direction: alternate-reverse;
-  /*play animation back&forth, but starting opposite end to main animation*/
-}
-.load__ball--9 {
+.load__balls--9 {
   animation-delay: 800ms;
-}
-.load__ball--9-inv {
-  /*loop also generates the same for the "inverse" smaller balls in loading page*/
-  width: 1.719rem;
-  height: 1.719rem;
-  animation-delay: 800ms;
-  /*ball time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
-  animation-direction: alternate-reverse;
-  /*play animation back&forth, but starting opposite end to main animation*/
 }
 
 /*Main colour gradient button used for each page*/

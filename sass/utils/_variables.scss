@@ -23,15 +23,14 @@ $transition-timing: 500ms;
 /*footer variabels*/
 $footerbackground:#353535;
 
-
+/*variables used for loading page*/
 $loadpage-duration: 3s;
 $loadpage-delay: 1s;
-$animation-count: 3;
 
-$ball-size: 3.438rem; /*55px*/
-$nos-loading-balls: 9;
-$ball-loading-duration: 800ms;
-$staggered-delay: $ball-loading-duration / $nos-loading-balls;
+$animation-repetition: 3;
+$num-of-balls: 9;
+$ball-anim-duration: 800ms;
+$staggered-delay: $ball-anim-duration / $num-of-balls;
 
 /*variables used for menu card animation*/
 $number-of-cards: 3;
