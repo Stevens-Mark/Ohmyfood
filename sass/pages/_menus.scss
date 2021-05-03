@@ -106,7 +106,17 @@
             &__logo{  
             transform: rotate(360deg);  /*rotate check tick icon at the same time as slide in on hover*/
             }
-        }       /*decrease the size of the description container by the same amount the tick icon moves to the left to give the illusion that it pushes the price to the left*/
+        }      
+        h3{
+            width: 100%;
+            transition: width $transition-timing ease-in-out;
+        }
+        /*decrease the size of the food__item heading h3 container by the same amount the tick icon moves so text still truncates*/
+         &:hover  h3{
+            width: calc(100% - 4.375rem); /*70px*/
+            transition: width $transition-timing ease-in-out;
+            }
+        /*decrease the size of the description container by the same amount the tick icon moves to the left to give the illusion that it pushes the price to the left*/
         &:hover .food__description{
             width: calc(100% - 4.375rem); /*70px*/
             transition: width $transition-timing ease-in-out;
@@ -124,6 +134,7 @@
                 text-overflow: ellipsis;  /*replaces text with ellipsis (3 dots) when not enough space*/
             }
         }
+        
         &__tickbox{             /*green check tick box container styling & postioning*/
             width: 4.375rem; /*70px*/
             height: 4.375rem;

@@ -334,7 +334,7 @@ a {
     /*55px*/
   }
 }
-@media (min-width: 950px) {
+@media (min-width: 925px) {
   .header__logo {
     height: 4.375rem;
     /*70px*/
@@ -447,7 +447,7 @@ a {
   align-items: center;
   margin-bottom: 2.875rem;
 }
-@media (min-width: 950px) {
+@media (min-width: 925px) {
   .select {
     flex-direction: row;
   }
@@ -475,7 +475,7 @@ a {
     flex-flow: row wrap;
   }
 }
-@media (min-width: 950px) {
+@media (min-width: 925px) {
   .restaurant-container {
     gap: 0rem;
     flex-wrap: nowrap;
@@ -631,7 +631,7 @@ a {
 .food-container {
   flex-direction: column;
 }
-@media (min-width: 950px) {
+@media (min-width: 925px) {
   .food-container {
     flex-direction: row;
     justify-content: space-around;
@@ -645,7 +645,7 @@ a {
   flex-direction: column;
   gap: 1.25rem;
 }
-@media (min-width: 950px) {
+@media (min-width: 925px) {
   .food {
     display: block;
     flex: 1;
@@ -678,13 +678,14 @@ a {
   /*start with cards invisible*/
   animation: fadein 1s forwards ease-in-out;
   /*loop dynamically generates each card's selector name/number & time delay*/
+  /*decrease the size of the food__item heading h3 container by the same amount the tick icon moves so text still truncates*/
   /*decrease the size of the description container by the same amount the tick icon moves to the left to give the illusion that it pushes the price to the left*/
 }
 .food__item--1 {
   animation-delay: 0.25s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-@media (min-width: 950px) {
+@media (min-width: 925px) {
   .food__item {
     margin-left: 5px;
     margin-right: 5px;
@@ -695,7 +696,7 @@ a {
   animation-delay: 0.5s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-@media (min-width: 950px) {
+@media (min-width: 925px) {
   .food__item {
     margin-left: 5px;
     margin-right: 5px;
@@ -706,7 +707,7 @@ a {
   animation-delay: 0.75s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-@media (min-width: 950px) {
+@media (min-width: 925px) {
   .food__item {
     margin-left: 5px;
     margin-right: 5px;
@@ -717,7 +718,7 @@ a {
   animation-delay: 1s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-@media (min-width: 950px) {
+@media (min-width: 925px) {
   .food__item {
     margin-left: 5px;
     margin-right: 5px;
@@ -731,6 +732,15 @@ a {
 .food__item:hover .food__tickbox__logo {
   transform: rotate(360deg);
   /*rotate check tick icon at the same time as slide in on hover*/
+}
+.food__item h3 {
+  width: 100%;
+  transition: width 500ms ease-in-out;
+}
+.food__item:hover h3 {
+  width: calc(100% - 4.375rem);
+  /*70px*/
+  transition: width 500ms ease-in-out;
 }
 .food__item:hover .food__description {
   width: calc(100% - 4.375rem);
