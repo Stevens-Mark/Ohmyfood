@@ -334,7 +334,7 @@ a {
     /*55px*/
   }
 }
-@media (min-width: 925px) {
+@media (min-width: 950px) {
   .header__logo {
     height: 4.375rem;
     /*70px*/
@@ -447,7 +447,7 @@ a {
   align-items: center;
   margin-bottom: 2.875rem;
 }
-@media (min-width: 925px) {
+@media (min-width: 950px) {
   .select {
     flex-direction: row;
   }
@@ -475,7 +475,7 @@ a {
     flex-flow: row wrap;
   }
 }
-@media (min-width: 925px) {
+@media (min-width: 950px) {
   .restaurant-container {
     gap: 0rem;
     flex-wrap: nowrap;
@@ -627,16 +627,28 @@ a {
   bottom: -3px;
 }
 
+/*container added to help responsive design*/
+.food-container {
+  flex-direction: column;
+}
+@media (min-width: 950px) {
+  .food-container {
+    flex-direction: row;
+    justify-content: space-around;
+    flex: auto;
+  }
+}
+
 /*Food Menu cards*/
 .food {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-@media (min-width: 1024px) {
+@media (min-width: 950px) {
   .food {
-    flex-direction: row;
-    gap: 0rem;
+    display: block;
+    flex: auto;
   }
 }
 .food h3 {
@@ -670,40 +682,44 @@ a {
   animation-delay: 0.25s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-@media (min-width: 1024px) {
+@media (min-width: 950px) {
   .food__item {
     margin-left: 5px;
     margin-right: 5px;
+    margin-bottom: 1.25rem;
   }
 }
 .food__item--2 {
   animation-delay: 0.5s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-@media (min-width: 1024px) {
+@media (min-width: 950px) {
   .food__item {
     margin-left: 5px;
     margin-right: 5px;
+    margin-bottom: 1.25rem;
   }
 }
 .food__item--3 {
   animation-delay: 0.75s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-@media (min-width: 1024px) {
+@media (min-width: 950px) {
   .food__item {
     margin-left: 5px;
     margin-right: 5px;
+    margin-bottom: 1.25rem;
   }
 }
 .food__item--4 {
   animation-delay: 1s;
   /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-@media (min-width: 1024px) {
+@media (min-width: 950px) {
   .food__item {
     margin-left: 5px;
     margin-right: 5px;
+    margin-bottom: 1.25rem;
   }
 }
 .food__item:hover .food__tickbox {

@@ -47,15 +47,24 @@
         }             
 }
 
+/*container added to help responsive design*/
+.food-container{
+    flex-direction: column;
+    @media (min-width: $laptop-onwards){
+        flex-direction: row;
+        justify-content: space-around;
+        flex: auto;
+    }
+}
+
 /*Food Menu cards*/
-.food
-{
+.food{
     display: flex;
     flex-direction: column;
     gap: $layout-gutter;
-        @media (min-width: $desktop-onwards){
-            flex-direction: row;
-            gap:0rem;
+        @media (min-width: $laptop-onwards){
+                display: block;
+                flex: auto;
         }    
     h3{
         margin: 0px;
@@ -84,9 +93,10 @@
             &--#{$i} {
                 animation-delay: $time-delay * $i;  /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
             }
-                @media (min-width: $desktop-onwards){
+                @media (min-width: $laptop-onwards){
                     margin-left: 5px;
                     margin-right: 5px;
+                    margin-bottom: 1.25rem;
                 } 
             }
         &:hover .food__tickbox{         /*slide check tick icon into view from right on hover*/
