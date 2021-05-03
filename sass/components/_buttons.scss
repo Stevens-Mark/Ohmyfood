@@ -28,7 +28,7 @@
             bottom: 0;
             left: 0;
             border-radius: 2rem;
-            background-color: rgba(255,255,255, 0.1);
+            background-color: rgba(255,255,255, 0.2);
             opacity: 0;                                     /*layer hidden until hover*/
             z-index: -1;                                    /*Z-index changes stacking order so background is behind*/
             transition: opacity $transition-timing;    /*text but infront of original button background*/
@@ -85,7 +85,7 @@
             bottom: 0;
             left: 0;
             border-radius: 1.2rem;
-            background-color: rgba(255,255,255, 0.2);
+            background-color: rgba(255,255,255, 0.3);
             opacity: 0;                                     /*layer hidden until hover*/
             z-index: -1;                                    /*changes stacking order so background is behind*/
             transition: opacity $transition-timing;    /*text but infront of original button background*/
