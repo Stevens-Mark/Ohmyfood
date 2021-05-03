@@ -64,7 +64,9 @@
     gap: $layout-gutter;
         @media (min-width: $laptop-onwards){
                 display: block;
-                flex: auto;
+                flex: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
         }    
     h3{
         margin: 0px;

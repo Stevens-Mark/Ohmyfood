@@ -648,7 +648,9 @@ a {
 @media (min-width: 950px) {
   .food {
     display: block;
-    flex: auto;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 .food h3 {
