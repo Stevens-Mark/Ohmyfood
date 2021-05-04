@@ -53,7 +53,7 @@
     @media (min-width: $laptop-onwards){
         flex-direction: row;
         justify-content: space-around;
-        flex: auto;
+        /*flex: auto;*/
     }
 }
 
@@ -142,7 +142,6 @@
             border-radius: 0rem 1rem 1rem 0rem;
             position: absolute;
             top: 0rem;
-            bottom: 0rem;
             right: 0rem;
             transform: translateX(4.375rem);        /*animation transform start positions: off right hidden out of view*/
             transition: transform $transition-timing ease-in-out;
