@@ -14,6 +14,7 @@
             }
         }
     &__banner{      /*background colour graded*/
+        height: 3.125rem;
         justify-content: center;
         align-items: center;
         background-image: linear-gradient(to top, $banner-background-light 90%, $banner-background-dark 100%);
@@ -21,6 +22,12 @@
             @include icon-style; /*sets the logo size*/
             margin-right: $icon-margin-right;
         }
+    }
+    &__search{
+        background-color: $banner-background-light;
+        border: none;
+        color: $primary-text;
+        font-size: 1rem;
     }
     &__instructions{    /*declare the style for the header instructions*/
         flex-direction: column;

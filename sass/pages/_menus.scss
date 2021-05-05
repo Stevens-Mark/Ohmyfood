@@ -75,8 +75,8 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        flex: 1;
-        min-width: 0;
+        /*flex: 1;
+        min-width: 0;*/
     }
     &__item{
         border-radius: 1rem; 
@@ -86,7 +86,7 @@
         @include card-boxshadow;
         margin-left: $layout-gutter;
         margin-right: $layout-gutter;
-        flex: 1;
+        /*flex: 1;*/
         overflow: hidden;   /*hides check tick icon when not in view*/
         opacity: 0;         /*start with cards invisible*/
         animation: fadein $card-animation-time forwards ease-in-out;
@@ -128,7 +128,7 @@
         width: 100%;  /*increase the description container width at the same rate the tick icon moves back to the right to give a smooth transition back to start*/
         transition: width $transition-timing ease-in-out;
             &--truncate{/*truncates the text if needed*/ 
-                flex: 1;
+               /* flex: 1;*/
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;  /*replaces text with ellipsis (3 dots) when not enough space*/
