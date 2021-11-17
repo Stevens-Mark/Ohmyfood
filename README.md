@@ -1,4 +1,4 @@
-![OhmyFood](/images/logo/ohmyfood.png)
+![OhmyFood](public/images/logo/ohmyfood.png)
 
 # OPENCLASSROOMS PROJECT 3 
 
