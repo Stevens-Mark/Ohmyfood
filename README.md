@@ -1,4 +1,4 @@
-![OhmyFood](/images/logo/ohmyfood@2x.svg)
+![OhmyFood](public/images/logo/ohmyfood.png)
 
 # OPENCLASSROOMS PROJECT 3 
 
@@ -22,18 +22,18 @@ For more information (scenario, etc.) on this project, please see the "Project b
 
 ## Dynamisez une page web avec des animations CSS
 
-(Ce projet fait partie de la formation "D�veloppeur Front-End" d'OpenClassrooms)
+(Ce projet fait partie de la formation "Développeur Front-End" d'OpenClassrooms)
 
-Ohmyfood! est une jeune startup qui voudrait s'imposer sur le march� de la restauration. L'objectif est de d�velopper un site 100% mobile qui r�pertorie les menus de restaurants gastronomiques. En plus des syst�mes classiques de r�servation, les clients pourront composer le menu de leur repas pour que les plats soient pr�ts � leur arriv�e. Finis, les temps d'attente au restaurant !
+Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la restauration. L'objectif est de développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques. En plus des systémes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant !
 
-Pour plus d'informations (sc�nario, etc.) sur ce projet, veuillez consulter le dossier " Project brief ".
+Pour plus d'informations (scénario, etc.) sur ce projet, veuillez consulter le dossier " Project brief ".
 
 - Langues : HTML5 et Sass (stylesheet language)
 
 ### Compétences évaluées
 
 - [x] Mettre en place une structure de navigation pour un site web
-- [x] Mettre en �uvre des effets CSS graphiques avanc�s
-- [x] Assurer la coh�rence graphique d'un site web
+- [x] Mettre en œuvre des effets CSS graphiques avancés
+- [x] Assurer la cohérence graphique d'un site web
 
 
