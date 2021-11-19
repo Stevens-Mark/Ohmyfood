@@ -1,6 +1,6 @@
 ![OhmyFood](public/images/logo/ohmyfood.png)
 
-# OPENCLASSROOMS PROJECT 3 
+# OPENCLASSROOMS PROJECT 3 (*English*])
 
 ## Make a web page dynamic with CSS animations
 
@@ -12,19 +12,19 @@ Ohmyfood! is a young startup that would like to impose itself on the restaurant 
 ### Objective
 - Translate the 4 menus (mock-ups) into web pages using CSS animations
 
-- Further information (scenario, technical costraints, etc.) on this project, please see the the folder `Project Briefs`
+- Languages: HTML5 & Sass (stylesheet language)
 
+- For further information (scenario, technical constraints, etc.) on this project, please see the the folder `Project Briefs`
 
-- 	Languages: HTML5 & Sass (stylesheet language)
 
 ### Competences assessed
 
-- [x] et up a navigation structure for a website
+- [x] Set up a navigation structure for a website
 - [x] Implement advanced graphic CSS effects
 - [x] Ensure the graphic coherence of a website
 
 
-# OPENCLASSROOMS PROJET 3 
+# OPENCLASSROOMS PROJET 3 (*Français*])
 
 ## Dynamisez une page web avec des animations CSS
 
@@ -35,10 +35,10 @@ Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la rest
 ### Objectif
 - Traduire les 4 menus (maquettes) en pages web en utilisant des animations CSS.
 
+- Langues : HTML5 et Sass (stylesheet language)
+
 - Pour plus d'informations (scénario, contraintes techniques, etc.) sur ce projet, veuillez consulter le dossier `Project Briefs`.
 
-
-- Langues : HTML5 et Sass (stylesheet language)
 
 ### Compétences évaluées
 
