@@ -6,8 +6,14 @@
 
 (This project is part of the "Front-End Developer" training by OpenClassrooms).
 
+
 Ohmyfood! is a young startup that would like to impose itself on the restaurant market. The objective is to develop a 100% mobile site that lists the menus of gourmet restaurants. In addition to the classic reservation systems, customers will be able to compose the menu of their meal so that the dishes are ready when they arrive. No more waiting in restaurants!
-For more information (scenario, etc.) on this project, please see the "Project brief" folder.
+
+### Objective
+- Translate the 4 menus (mock-ups) into web pages using CSS animations
+
+- Further information (scenario, technical costraints, etc.) on this project, please see the the folder `Project Briefs`
+
 
 - 	Languages: HTML5 & Sass (stylesheet language)
 
@@ -26,7 +32,11 @@ For more information (scenario, etc.) on this project, please see the "Project b
 
 Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la restauration. L'objectif est de développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques. En plus des systémes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant !
 
-Pour plus d'informations (scénario, etc.) sur ce projet, veuillez consulter le dossier " Project brief ".
+### Objectif
+- Traduire les 4 menus (maquettes) en pages web en utilisant des animations CSS.
+
+- Pour plus d'informations (scénario, contraintes techniques, etc.) sur ce projet, veuillez consulter le dossier `Project Briefs`.
+
 
 - Langues : HTML5 et Sass (stylesheet language)
 
