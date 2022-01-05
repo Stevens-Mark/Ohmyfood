@@ -15,14 +15,13 @@
 }
 
 .loading {
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
     &__dot {
       position: relative;
       width: 3em;
       height: 3em;
       margin: 2em;
       border-radius: 50%;
-  
       &::before {
         position: absolute;
         content: "";
@@ -32,12 +31,10 @@
         border-radius: inherit;
         animation: wave 1s ease-out infinite;
       }
-  
       @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
           background: nth($colors, $i);
-  
-          &::before {
+        &::before {
             animation-delay: $i * 0.2s;
           }
         }
