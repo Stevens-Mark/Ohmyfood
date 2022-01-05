@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* colors for laoding animation */
 /*Accueil page variables*/
 /*General variables*/
 /*footer variables*/
@@ -112,18 +113,16 @@ a {
     z-index: -1;
   }
 }
-/*loading balls expand/contract*/
-@keyframes balls {
-  0% {
-    transform: scale(0.2);
+/*pulsing loading balls*/
+@keyframes wave {
+  50%, 75% {
+    transform: scale(2.5);
+  }
+  80%, 100% {
     opacity: 0;
   }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
-/*Loading Page animation container*/
+/*Loading Page animation*/
 .loader {
   flex-direction: column;
   background: white;
@@ -136,64 +135,45 @@ a {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  animation: fadeout 3s 500ms linear both;
+  animation: fadeout 3s 600ms linear both;
 }
-.loader__container {
-  /*Declaration, defining & styling of loading balls*/
-  height: 40px;
-  justify-content: space-evenly;
-  margin-bottom: 2rem;
+
+.loading {
+  margin-bottom: 50px;
 }
-.loader__container__balls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  margin: 1px;
-  background-color: #9356DC;
+.loading__dot {
+  position: relative;
+  width: 3em;
+  height: 3em;
+  margin: 2em;
   border-radius: 50%;
-  width: 25px;
-  /*backwards extends keyframe to start the value before the keyframe plays,
-  alterate will play keyframe forwards then backwards & ease sets the timing*/
-  animation: balls 800ms backwards ease-in-out alternate;
-  animation-iteration-count: 3;
-  /*play animation "x" times*/
-  /*loop dynamically generates each balls selector name/number & time delay*/
 }
-.loader__container__balls:nth-child(even) {
-  background-color: #FF79DA;
-  /*assign color to each "even" ball: ie, 2,4 etc*/
+.loading__dot::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  animation: wave 1s ease-out infinite;
 }
-.loader__container__balls:nth-child(3n+3) {
-  background-color: #99E2D0;
-  /*assign color to every 3rd ball: ie, 3,6,9 etc*/
+.loading__dot:nth-child(1) {
+  background: #99E2D0;
 }
-.loader__container__balls--1 {
-  animation-delay: 88.8888888889ms;
+.loading__dot:nth-child(1)::before {
+  animation-delay: 0.2s;
 }
-.loader__container__balls--2 {
-  animation-delay: 177.7777777778ms;
+.loading__dot:nth-child(2) {
+  background: #9356DC;
 }
-.loader__container__balls--3 {
-  animation-delay: 266.6666666667ms;
+.loading__dot:nth-child(2)::before {
+  animation-delay: 0.4s;
 }
-.loader__container__balls--4 {
-  animation-delay: 355.5555555556ms;
+.loading__dot:nth-child(3) {
+  background: #FF79DA;
 }
-.loader__container__balls--5 {
-  animation-delay: 444.4444444444ms;
-}
-.loader__container__balls--6 {
-  animation-delay: 533.3333333333ms;
-}
-.loader__container__balls--7 {
-  animation-delay: 622.2222222222ms;
-}
-.loader__container__balls--8 {
-  animation-delay: 711.1111111111ms;
-}
-.loader__container__balls--9 {
-  animation-delay: 800ms;
+.loading__dot:nth-child(3)::before {
+  animation-delay: 0.6s;
 }
 
 /*Main colour gradient button used for each page*/

@@ -19,8 +19,8 @@
         z-index: -1;}
 }
 
-/*loading balls expand/contract*/
-@keyframes balls {
-    0% {transform: scale(0.2); opacity:0;}  
-    100% {transform: scale(1.0);opacity:1;}
-}
+/*pulsing loading balls*/
+@keyframes wave {
+    50%, 75% { transform: scale(2.5); }
+    80%, 100% {opacity: 0; }
+  }

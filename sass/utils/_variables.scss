@@ -6,6 +6,9 @@ $primary-text:#000;
 $secondary-text: #ffff;
 $card-color:#ffff;
 
+/* colors for laoding animation */
+$colors: #99E2D0, #9356DC,#FF79DA;
+
 /*Accueil page variables*/
 $banner-background-light: #eaeaea;
 $banner-background-dark:#cfcfcf;
@@ -25,12 +28,7 @@ $footerbackground:#353535;
 
 /*variables used for loading page*/
 $loadpage-duration: 3s;
-$loadpage-delay: 500ms;
-
-$animation-repetition: 3;
-$num-of-balls: 9;
-$ball-anim-duration: 800ms;
-$staggered-delay: $ball-anim-duration / $num-of-balls;
+$loadpage-delay: 600ms;
 
 /*variables used for menu card animation*/
 $number-of-cards: 4;
