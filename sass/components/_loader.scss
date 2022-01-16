@@ -2,12 +2,9 @@
 .loader {
     flex-direction: column;
     background: white;
-    font-family: "Shrikhand";
     justify-content: center;
     align-items: center;
     position: fixed;
-   /* left: 0px;
-    top: 0px;*/
     width: 100%;
     height: 100%;
     z-index: 9999;
@@ -15,33 +12,28 @@
 }
 
 .loading {
-    margin-bottom: 3.125rem;
-    &__dot {
-      position: relative;
-      width: 3em;
-      height: 3em;
-      margin: 2em;
-      border-radius: 50%;
-      &::before {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        border-radius: inherit;
-        animation: wave 1s ease-out infinite;
-      }
-      @for $i from 1 through 3 {
-        &:nth-child(#{$i}) {
-          background: nth($colors, $i);
-        &::before {
-            animation-delay: $i * 0.2s;
-          }
-        }
+  margin-bottom: 3.125rem;
+  &__dot {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 5px;
+  border-radius: 25px;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        background: nth($colors, $i);
+        animation-delay: $i * 0.2s;
       }
     }
   }
+}
   
 
+
   
+
+
 
