@@ -75,8 +75,6 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        /*flex: 1;
-        min-width: 0;*/
     }
     &__item{
         border-radius: 1rem; 
@@ -86,7 +84,6 @@
         @include card-boxshadow;
         margin-left: $layout-gutter;
         margin-right: $layout-gutter;
-        /*flex: 1;*/
         overflow: hidden;   /*hides check tick icon when not in view*/
         opacity: 0;         /*start with cards invisible*/
         animation: fadein $card-animation-time forwards ease-in-out;
