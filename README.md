@@ -5,7 +5,7 @@
 # OPENCLASSROOMS PROJECT 3 (*English*)
 
 # OhmyFood ##
-Open website at [Ohmyfood-netifly](https://ohmyfood2021.netlify.app/)
+Open website at [Ohmyfood](https://ohmyfood2021.netlify.app/)
 
 ## Make a web page dynamic with CSS animations
 
@@ -32,7 +32,7 @@ Ohmyfood! is a young startup that would like to impose itself on the restaurant 
 # OPENCLASSROOMS PROJET 3 (*Français*)
 
 # OhmyFood ##
-Ouvrir le site web à [Ohmyfood-netifly](https://ohmyfood2021.netlify.app/)
+Ouvrir le site web à [Ohmyfood](https://ohmyfood2021.netlify.app/)
 
 ## Dynamisez une page web avec des animations CSS
 
