@@ -1,9 +1,11 @@
 ![OhmyFood](public/images/logo/ohmyfood.png)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6c4bd65c-45f1-4fe7-b969-06145d6d0a19/deploy-status)](https://app.netlify.com/sites/ohmyfood2021/deploys)
+
 # OPENCLASSROOMS PROJECT 3 (*English*)
 
 # OhmyFood ##
-Open website at Git pages: https://stevens-mark.github.io/StevensMark_P3_21042021/
+Open website at [Ohmyfood-netifly](https://ohmyfood2021.netlify.app/)
 
 ## Make a web page dynamic with CSS animations
 
@@ -30,7 +32,7 @@ Ohmyfood! is a young startup that would like to impose itself on the restaurant 
 # OPENCLASSROOMS PROJET 3 (*Français*)
 
 # OhmyFood ##
-Ouvrir le site web aux pages Git: https://stevens-mark.github.io/StevensMark_P3_21042021/
+Ouvrir le site web à [Ohmyfood-netifly](https://ohmyfood2021.netlify.app/)
 
 ## Dynamisez une page web avec des animations CSS
 
