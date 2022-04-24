@@ -9,9 +9,6 @@ Open website at [Ohmyfood](https://ohmyfood2021.netlify.app/)
 
 ## Make a web page dynamic with CSS animations
 
-(This project is part of the "Front-End Developer" training by OpenClassrooms).
-
-
 Ohmyfood! is a young startup that would like to impose itself on the restaurant market. The objective is to develop a 100% mobile site that lists the menus of gourmet restaurants. In addition to the classic reservation systems, customers will be able to compose the menu of their meal so that the dishes are ready when they arrive. No more waiting in restaurants!
 
 ### Objective
@@ -35,8 +32,6 @@ Ohmyfood! is a young startup that would like to impose itself on the restaurant 
 Ouvrir le site web à [Ohmyfood](https://ohmyfood2021.netlify.app/)
 
 ## Dynamisez une page web avec des animations CSS
-
-(Ce projet fait partie de la formation "Développeur Front-End" d'OpenClassrooms)
 
 Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la restauration. L'objectif est de développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques. En plus des systémes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant !
 
