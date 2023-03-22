@@ -7,8 +7,7 @@
 /*variables used for menu card animation*/
 /*calculates the delay time between each card based on the number of cards & the total time of animation*/
 /*Media Queries used*/
-/*returns the pastel colour of a given colour*/
-/*mixins for the button/card shadow effects*/
+/*returns the pastel colour of a given colour*/ /*mixins for the button/card shadow effects*/
 /* icon sizing*/
 /* HEADER */
 /* Main elements of the page */
@@ -24,8 +23,7 @@ body {
 
 /*border-box tells the browser to account for any border and padding in the values specify for an element's width and height*/
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*set max width*/
@@ -35,8 +33,6 @@ body {
 }
 
 .d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -46,24 +42,22 @@ body {
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
   /* Définition of font called Shrikhand*/
   font-family: "Shrikhand";
   src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
-
 /*set heading title sizes*/
 h1 {
-  font-size: 1.625rem;
-  /*26px*/
+  font-size: 1.625rem; /*26px*/
 }
 
-h2 {
-  /*Heading H2 positioning*/
+h2 { /*Heading H2 positioning*/
   padding-left: 1.25rem;
   margin: 0rem;
 }
@@ -101,33 +95,27 @@ a {
     opacity: 1;
   }
 }
-
 /*animation to fade in menu items on restaurant menu pages*/
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
+    transform: translateY(10%);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 @keyframes fadein {
   from {
     opacity: 0;
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
+    transform: translateY(10%);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
-
 /*fade out loading page icon*/
 /*Z-index: "restacked" loading page so accueil page links accessible after animation*/
 @-webkit-keyframes fadeout {
@@ -154,58 +142,41 @@ a {
     z-index: -1;
   }
 }
-
 /*bouncing loading balls*/
 @-webkit-keyframes bounce {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   40% {
-    -webkit-transform: translateY(23px);
-            transform: translateY(23px);
+    transform: translateY(23px);
   }
   60% {
-    -webkit-transform: translateY(-25px);
-            transform: translateY(-25px);
+    transform: translateY(-25px);
   }
   80% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 @keyframes bounce {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   40% {
-    -webkit-transform: translateY(23px);
-            transform: translateY(23px);
+    transform: translateY(23px);
   }
   60% {
-    -webkit-transform: translateY(-25px);
-            transform: translateY(-25px);
+    transform: translateY(-25px);
   }
   80% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
-
 /*Loading Page animation*/
 .loader {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background: white;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -217,7 +188,6 @@ a {
 .loading {
   margin-bottom: 3.125rem;
 }
-
 .loading__dot {
   display: inline-block;
   height: 15px;
@@ -231,19 +201,16 @@ a {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
-
 .loading__dot:nth-child(1) {
   background: #99E2D0;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
-
 .loading__dot:nth-child(2) {
   background: #9356DC;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-
 .loading__dot:nth-child(3) {
   background: #FF79DA;
   -webkit-animation-delay: 0.6s;
@@ -256,122 +223,79 @@ a {
   border-radius: 2rem;
   padding: 1rem;
   text-align: center;
-  color: #ffff;
+  color: white;
   /*gradient color on button based on color scheme*/
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
-  -webkit-box-shadow: 0px 4px 12px 0px #d9d9d9;
-          box-shadow: 0px 4px 12px 0px #d9d9d9;
+  box-shadow: 0px 4px 12px 0px #d9d9d9;
   position: relative;
   z-index: 1;
 }
-
-.primary-button--commander {
-  /*menu order ("commander") button*/
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.primary-button--commander { /*menu order ("commander") button*/
+  align-self: center;
   width: 205px;
   margin-top: 2.875rem;
 }
-
 .primary-button:hover::after {
-  opacity: 1;
-  /*set opacity to 1 so the layer is visible on hover*/
+  opacity: 1; /*set opacity to 1 so the layer is visible on hover*/
 }
-
-.primary-button::after {
-  /*every mention of primary button creates a duplicate layer*/
+.primary-button::after { /*every mention of primary button creates a duplicate layer*/
   content: "";
-  position: absolute;
-  /*create white mask layer that lightens*/
-  top: 0;
-  /* the button on hover*/
+  position: absolute; /*create white mask layer that lightens*/
+  top: 0; /* the button on hover*/
   right: 0;
   bottom: 0;
   left: 0;
   border-radius: 2rem;
   background-color: rgba(255, 255, 255, 0.2);
-  opacity: 0;
-  /*layer hidden until hover*/
-  z-index: -1;
-  /*Z-index changes stacking order so background is behind*/
-  -webkit-transition: opacity 500ms;
-  transition: opacity 500ms;
-  /*text but infront of original button background*/
-  /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  opacity: 0; /*layer hidden until hover*/
+  z-index: -1; /*Z-index changes stacking order so background is behind*/
+  transition: opacity 500ms; /*text but infront of original button background*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   /* x,y,blur,spread*/
 }
 
 /*selection buttons used in the fonctionnement section*/
 .select-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-weight: bold;
   cursor: pointer;
   border-radius: 1.2rem;
   padding: 1.25rem;
   width: 90%;
-  fill: #7e7e7e;
-  /*primary color of icons*/
-  -webkit-box-shadow: 0px 4px 12px 0px #d9d9d9;
-          box-shadow: 0px 4px 12px 0px #d9d9d9;
+  fill: #7e7e7e; /*primary color of icons*/
+  box-shadow: 0px 4px 12px 0px #d9d9d9;
   margin: 1.25rem;
   background: #f6f6f6;
   position: relative;
   z-index: 1;
 }
-
-.select-button__number {
-  /*style for numbers on fonctionnement buttons*/
+.select-button__number { /*style for numbers on fonctionnement buttons*/
   background: #9356DC;
-  color: #ffff;
+  color: white;
   border-radius: 50%;
-  width: 1.563rem;
-  /*25*/
+  width: 1.563rem; /*25*/
   height: 1.563rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: relative;
   left: -1.563rem;
 }
-
-.select-button__icon {
-  /* button icons size/position*/
+.select-button__icon { /* button icons size/position*/
   width: 1.25rem;
   height: 1.25rem;
   margin-right: 1.25rem;
 }
-
-.select-button--colourmodify {
-  /*icon & button color modification for dégustez button*/
-  background: #f4ebff;
-  /* alter button background color based on main colour*/
+.select-button--colourmodify { /*icon & button color modification for dégustez button*/
+  background: hsl(267.3134328358deg, 100%, 96%); /* alter button background color based on main colour*/
   fill: #9356DC;
 }
-
 .select-button:hover::after {
-  opacity: 1;
-  /*set to 1 so the layer is visible*/
+  opacity: 1; /*set to 1 so the layer is visible*/
 }
-
-.select-button::after {
-  /*::after places this "white mask" layer everywhere the select-button*/
-  content: "";
-  /* selector is mentioned in the html with new boxshadow value for hover*/
+.select-button::after { /*::after places this "white mask" layer everywhere the select-button*/
+  content: ""; /* selector is mentioned in the html with new boxshadow value for hover*/
   position: absolute;
   top: 0;
   right: 0;
@@ -379,19 +303,12 @@ a {
   left: 0;
   border-radius: 1.2rem;
   background-color: rgba(255, 255, 255, 0.3);
-  opacity: 0;
-  /*layer hidden until hover*/
-  z-index: -1;
-  /*changes stacking order so background is behind*/
-  -webkit-transition: opacity 500ms;
-  transition: opacity 500ms;
-  /*text but infront of original button background*/
-  /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  opacity: 0; /*layer hidden until hover*/
+  z-index: -1; /*changes stacking order so background is behind*/
+  transition: opacity 500ms; /*text but infront of original button background*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   /* x,y,blur,spread*/
 }
-
 @media (min-width: 600px) {
   .select-button {
     width: 75%;
@@ -400,102 +317,64 @@ a {
 
 /*HEADER for main page*/
 .header {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   /*HEADER components for menu pages*/
   /*so backarrow moves to left side corner*/
 }
-
 .header__logo {
-  height: 1.563rem;
-  /*25px*/
+  height: 1.563rem; /*25px*/
   margin: 0.9rem;
 }
-
 @media (min-width: 600px) {
   .header__logo {
-    height: 3.438rem;
-    /*55px*/
+    height: 3.438rem; /*55px*/
   }
 }
-
 @media (min-width: 925px) {
   .header__logo {
-    height: 4.375rem;
-    /*70px*/
+    height: 4.375rem; /*70px*/
   }
 }
-
-.header__banner {
-  /*background colour graded*/
+.header__banner { /*background colour graded*/
   height: 3.125rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #eaeaea), to(#cfcfcf));
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(to top, #eaeaea 90%, #cfcfcf 100%);
 }
-
 .header__banner__icon {
   width: 1.25rem;
   height: 1.25rem;
   /*sets the logo size*/
   margin-right: 1.25rem;
 }
-
 .header__search {
   background-color: #eaeaea;
   border: none;
   color: #000;
   font-size: 1rem;
 }
-
-.header__instructions {
-  /*declare the style for the header instructions*/
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 2.9rem;
-  /*46px*/
+.header__instructions { /*declare the style for the header instructions*/
+  flex-direction: column;
+  align-items: center;
+  padding: 2.9rem; /*46px*/
   background: #f6f6f6;
   margin-bottom: 2.875rem;
 }
-
 .header__instructions > p {
   color: #7e7e7e;
 }
-
 .header__menu-banner {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
-.header__menu-banner__backarrow {
-  /*back to home page arrow*/
+.header__menu-banner__backarrow { /*back to home page arrow*/
   width: 1.25rem;
   height: 1.25rem;
   margin-left: 1.25rem;
 }
-
-.header__menu-banner__image {
-  /*menu header image*/
+.header__menu-banner__image { /*menu header image*/
   -webkit-animation: fade 2s ease-in-out both;
           animation: fade 2s ease-in-out both;
   height: 14.375rem;
@@ -503,112 +382,68 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.header__logo--adjust {
-  /*reposition ohmyfood logo slightly*/
+.header__logo--adjust { /*reposition ohmyfood logo slightly*/
   margin-right: 1.25rem;
   margin-left: 0rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  /*set flex:1 so logo takes up all available space*/
+  flex: 1; /*set flex:1 so logo takes up all available space*/
 }
 
 /*FOOTER used on all pages*/
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background: #353535;
   padding: 1.25rem;
 }
-
 .footer ul {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  list-style-type: none;
-  /*remove point*/
-  line-height: 1.625rem;
-  /*26px*/
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none; /*remove point*/
+  line-height: 1.625rem; /*26px*/
   padding-left: 0rem;
 }
-
 @media (min-width: 600px) {
   .footer ul {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
-
-.footer ul img {
-  /*smaller logo's sizing/positioning*/
+.footer ul img { /*smaller logo's sizing/positioning*/
   width: 0.9rem;
   height: 0.9rem;
   margin-right: 0.625rem;
 }
-
-.footer a {
-  /*footer Ohmyfood logo size*/
-  color: #ffff;
+.footer a { /*footer Ohmyfood logo size*/
+  color: white;
 }
-
 .footer a > img {
   width: 6.25rem;
 }
-
 @media (min-width: 600px) {
   .footer a {
     margin-bottom: 1.25rem;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
   }
   .footer a > img {
     width: 10rem;
   }
 }
-
-.footer address {
-  /*address balise in footer, reset font style to normal*/
+.footer address { /*address balise in footer, reset font style to normal*/
   font-style: normal;
 }
 
 .main {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 /*SELECT SECTION: choose a resto, menu then taste*/
 .select {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 2.875rem;
 }
-
 @media (min-width: 925px) {
   .select {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -617,76 +452,52 @@ a {
 .restaurants {
   background-color: #f6f6f6;
 }
-
 .restaurants h2 {
   padding-top: 1.4375rem;
 }
 
 /*Holds all restaurant cards*/
 .restaurant-container {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 1.25rem;
   padding-top: 1.4375rem;
   padding-bottom: 4.3125rem;
 }
-
 @media (min-width: 600px) {
   .restaurant-container {
     gap: 1.25rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
   }
 }
-
 @media (min-width: 925px) {
   .restaurant-container {
     gap: 0rem;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 }
 
 /* RESTAURANT CARDS*/
 .restaurant-card {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 255px;
-          flex: 1 1 255px;
-  /*short hand for flex grow, flex shrink, flex-basis*/
-  min-width: 190px;
-  /*after testing:190px & 255px help with the responsive design to avoid design breaks*/
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1 1 255px; /*short hand for flex grow, flex shrink, flex-basis*/
+  min-width: 190px; /*after testing:190px & 255px help with the responsive design to avoid design breaks*/
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   border-radius: 1rem;
   margin-left: 1.25rem;
   margin-right: 1.25rem;
-  background-color: #ffff;
-  -webkit-box-shadow: 0px 4px 12px 0px #d9d9d9;
-          box-shadow: 0px 4px 12px 0px #d9d9d9;
+  background-color: white;
+  box-shadow: 0px 4px 12px 0px #d9d9d9;
   position: relative;
   z-index: 1;
   /*every mention of primary button creates a duplicate layer*/
 }
-
-.restaurant-card__photo {
-  /*restaurant image styling*/
+.restaurant-card__photo { /*restaurant image styling*/
   border-radius: 1rem 1rem 0rem 0rem;
   height: 173px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.restaurant-card__photo--nouveau {
-  /*Green "Nouveau" remark that overlays photo*/
+.restaurant-card__photo--nouveau { /*Green "Nouveau" remark that overlays photo*/
   color: #24806a;
   font-weight: bold;
   background: #99E2D0;
@@ -697,129 +508,84 @@ a {
   right: 13px;
   text-align: center;
 }
-
-.restaurant-card__description {
-  /*positioning of descriptions under cards*/
-  display: -webkit-box;
-  display: -ms-flexbox;
+.restaurant-card__description { /*positioning of descriptions under cards*/
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin-top: -5px;
   padding-left: 8px;
 }
-
 .restaurant-card__description p {
   margin-top: -0.625rem;
 }
-
-.restaurant-card__heart {
-  /*heart image outline: size & position*/
+.restaurant-card__heart { /*heart image outline: size & position*/
   width: 1.25rem;
   height: 1.25rem;
   margin-right: 1.25rem;
 }
-
-.restaurant-card__heartgraded {
-  /*gradient heart: image size & position*/
+.restaurant-card__heartgraded { /*gradient heart: image size & position*/
   position: absolute;
   width: 1.25rem;
   height: 1.25rem;
   margin-right: 1.25rem;
   opacity: 0;
 }
-
-.restaurant-card__heartgraded:hover {
-  /*heart "fills" up on hover*/
+.restaurant-card__heartgraded:hover { /*heart "fills" up on hover*/
   opacity: 1;
-  -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
 }
-
 .restaurant-card:hover::after {
-  opacity: 1;
-  /*set to 1 so the layer is visible on hover*/
+  opacity: 1; /*set to 1 so the layer is visible on hover*/
 }
-
-.restaurant-card::after {
-  /*create boxshadow that appears around button*/
-  content: "";
-  /*when the opacity of the layer is changed*/
-  position: absolute;
-  /*avoids a repaint of page (no reloading) so*/
-  top: 0;
-  /*more efficient*/
+.restaurant-card::after { /*create boxshadow that appears around button*/
+  content: ""; /*when the opacity of the layer is changed*/
+  position: absolute; /*avoids a repaint of page (no reloading) so*/
+  top: 0; /*more efficient*/
   right: 0;
   bottom: 0;
   left: 0;
   border-radius: 1rem;
   opacity: 0;
   z-index: -1;
-  -webkit-transition: opacity 500ms;
   transition: opacity 500ms;
-  /*box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.26), 0 10px 20px 0 rgba(0, 0, 0, 0.19);*/
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   /* x,y,blur,spread*/
 }
 
 /*Restaurant Menu Section*/
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: #f6f6f6;
   border-radius: 2.5rem 2.5rem 0rem 0rem;
   margin-top: -2.5rem;
   position: relative;
   padding-bottom: 4.3125rem;
 }
-
 .menu h1 {
   padding-left: 1.25rem;
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
 }
-
 .menu__header {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.menu__heart {
-  /*heart image outline size & position*/
+.menu__heart { /*heart image outline size & position*/
   width: 1.25rem;
   height: 1.25rem;
   margin-right: 1.25rem;
 }
-
-.menu__heartgraded {
-  /*gradient heart image size & position*/
+.menu__heartgraded { /*gradient heart image size & position*/
   position: absolute;
   width: 1.25rem;
   height: 1.25rem;
   margin-right: 1.25rem;
   opacity: 0;
 }
-
-.menu__heartgraded:hover {
-  /*heart "fills" up on hover*/
+.menu__heartgraded:hover { /*heart "fills" up on hover*/
   opacity: 1;
-  -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
 }
-
 .menu h2 {
   text-transform: uppercase;
   font-weight: normal;
@@ -828,12 +594,9 @@ a {
   margin-top: 2rem;
   margin-bottom: 1.25rem;
 }
-
-.menu h2::after {
-  /*place line under food headings*/
+.menu h2::after { /*place line under food headings*/
   content: "";
-  display: block;
-  /* so the element starts on a new line*/
+  display: block; /* so the element starts on a new line*/
   border-bottom: 4px solid #99E2D0;
   width: 2.5rem;
   position: relative;
@@ -842,47 +605,30 @@ a {
 
 /*container added to help responsive design*/
 .food-container {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 @media (min-width: 925px) {
   .food-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-around;
     /*flex: auto;*/
   }
 }
 
 /*Food Menu cards*/
 .food {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 1.25rem;
 }
-
 @media (min-width: 925px) {
   .food {
     display: block;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 }
-
 .food h3 {
   margin: 0px;
   margin-bottom: 5px;
@@ -890,37 +636,27 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  /*flex: 1;
-        min-width: 0;*/
 }
-
 .food__item {
   border-radius: 1rem;
   padding: 0.9rem;
-  background-color: #ffff;
+  background-color: white;
   cursor: pointer;
-  -webkit-box-shadow: 0px 4px 12px 0px #d9d9d9;
-          box-shadow: 0px 4px 12px 0px #d9d9d9;
+  box-shadow: 0px 4px 12px 0px #d9d9d9;
   margin-left: 1.25rem;
   margin-right: 1.25rem;
-  /*flex: 1;*/
-  overflow: hidden;
-  /*hides check tick icon when not in view*/
-  opacity: 0;
-  /*start with cards invisible*/
+  overflow: hidden; /*hides check tick icon when not in view*/
+  opacity: 0; /*start with cards invisible*/
   -webkit-animation: fadein 1s forwards ease-in-out;
           animation: fadein 1s forwards ease-in-out;
   /*loop dynamically generates each card's selector name/number & time delay*/
   /*decrease the size of the food__item heading h3 container by the same amount the tick icon moves so text still truncates*/
   /*decrease the size of the description container by the same amount the tick icon moves to the left to give the illusion that it pushes the price to the left*/
 }
-
 .food__item--1 {
   -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
-  /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+          animation-delay: 0.25s; /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-
 @media (min-width: 925px) {
   .food__item {
     margin-left: 5px;
@@ -928,13 +664,10 @@ a {
     margin-bottom: 1.25rem;
   }
 }
-
 .food__item--2 {
   -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+          animation-delay: 0.5s; /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-
 @media (min-width: 925px) {
   .food__item {
     margin-left: 5px;
@@ -942,13 +675,10 @@ a {
     margin-bottom: 1.25rem;
   }
 }
-
 .food__item--3 {
   -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
-  /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+          animation-delay: 0.75s; /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-
 @media (min-width: 925px) {
   .food__item {
     margin-left: 5px;
@@ -956,13 +686,10 @@ a {
     margin-bottom: 1.25rem;
   }
 }
-
 .food__item--4 {
   -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
+          animation-delay: 1s; /*card time delay based on it's position, ie, fraction of the total time x1, x2, x3...*/
 }
-
 @media (min-width: 925px) {
   .food__item {
     margin-left: 5px;
@@ -970,99 +697,58 @@ a {
     margin-bottom: 1.25rem;
   }
 }
-
-.food__item:hover .food__tickbox {
-  /*slide check tick icon into view from right on hover*/
-  -webkit-transform: translateX(0rem);
-          transform: translateX(0rem);
+.food__item:hover .food__tickbox { /*slide check tick icon into view from right on hover*/
+  transform: translateX(0rem);
 }
-
 .food__item:hover .food__tickbox__logo {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-  /*rotate check tick icon at the same time as slide in on hover*/
+  transform: rotate(360deg); /*rotate check tick icon at the same time as slide in on hover*/
 }
-
 .food__item h3 {
   width: 100%;
-  -webkit-transition: width 500ms ease-in-out;
   transition: width 500ms ease-in-out;
 }
-
 .food__item:hover h3 {
-  width: calc(100% - 4.375rem);
-  /*70px*/
-  -webkit-transition: width 500ms ease-in-out;
+  width: calc(100% - 4.375rem); /*70px*/
   transition: width 500ms ease-in-out;
 }
-
 .food__item:hover .food__description {
-  width: calc(100% - 4.375rem);
-  /*70px*/
-  -webkit-transition: width 500ms ease-in-out;
+  width: calc(100% - 4.375rem); /*70px*/
   transition: width 500ms ease-in-out;
 }
-
 .food__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  /*increase the description container width at the same rate the tick icon moves back to the right to give a smooth transition back to start*/
-  -webkit-transition: width 500ms ease-in-out;
+  justify-content: space-between;
+  width: 100%; /*increase the description container width at the same rate the tick icon moves back to the right to give a smooth transition back to start*/
   transition: width 500ms ease-in-out;
 }
-
-.food__description--truncate {
-  /*truncates the text if needed*/
+.food__description--truncate { /*truncates the text if needed*/
   /* flex: 1;*/
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  /*replaces text with ellipsis (3 dots) when not enough space*/
+  text-overflow: ellipsis; /*replaces text with ellipsis (3 dots) when not enough space*/
 }
-
-.food__tickbox {
-  /*green check tick box container styling & postioning*/
-  width: 4.375rem;
-  /*70px*/
+.food__tickbox { /*green check tick box container styling & postioning*/
+  width: 4.375rem; /*70px*/
   height: 4.375rem;
   background: #99E2D0;
   border-radius: 0rem 1rem 1rem 0rem;
   position: absolute;
   top: 0rem;
   right: 0rem;
-  -webkit-transform: translateX(4.375rem);
-          transform: translateX(4.375rem);
-  /*animation transform start positions: off right hidden out of view*/
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
+  transform: translateX(4.375rem); /*animation transform start positions: off right hidden out of view*/
   transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
-
-.food__tickbox__logo {
-  /*white check tick on green backgound styling & postioning*/
-  height: 2.813rem;
-  /*45px*/
+.food__tickbox__logo { /*white check tick on green backgound styling & postioning*/
+  height: 2.813rem; /*45px*/
   width: 2.813rem;
   padding: 0.625rem;
-  color: #ffff;
+  color: white;
   background: #99E2D0;
   position: absolute;
   top: 0.75rem;
   bottom: 0rem;
   right: 0.75rem;
   border-radius: 50%;
-  -webkit-transform: rotate(-360deg);
-          transform: rotate(-360deg);
-  /*animation transform start positions*/
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
+  transform: rotate(-360deg); /*animation transform start positions*/
   transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

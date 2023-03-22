@@ -2,9 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6c4bd65c-45f1-4fe7-b969-06145d6d0a19/deploy-status)](https://app.netlify.com/sites/ohmyfood2021/deploys)
 
-# OPENCLASSROOMS PROJECT 3 (*English*)
 
-# OhmyFood ##
+# OhmyFood
 Open website at [Ohmyfood](https://ohmyfood2021.netlify.app/)
 
 ## Make a web page dynamic with CSS animations
@@ -19,14 +18,12 @@ Ohmyfood! is a young startup that would like to impose itself on the restaurant 
 - For further information (scenario, technical constraints, etc.) on this project, please see the the folder `Project Briefs`
 
 
-### Competences assessed
+### Competences
 
 - [x] Set up a navigation structure for a website
 - [x] Implement advanced graphic CSS effects
 - [x] Ensure the graphic coherence of a website
 
-
-# OPENCLASSROOMS PROJET 3 (*Français*)
 
 # OhmyFood ##
 Ouvrir le site web à [Ohmyfood](https://ohmyfood2021.netlify.app/)
@@ -43,7 +40,7 @@ Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la rest
 - Pour plus d'informations (scénario, contraintes techniques, etc.) sur ce projet, veuillez consulter le dossier `Project Briefs`.
 
 
-### Compétences évaluées
+### Compétences
 
 - [x] Mettre en place une structure de navigation pour un site web
 - [x] Mettre en œuvre des effets CSS graphiques avancés
